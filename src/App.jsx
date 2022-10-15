@@ -1,4 +1,5 @@
-import { Layout } from "./Components/index";
+import { Layout } from "./Components";
+
 function App() {
   return (
     <>
