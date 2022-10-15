@@ -122,11 +122,11 @@ function Navbar() {
         <Flex flexDir="column" align="center">
           {links.map((link) => {
             return (
-              <Box>
+              <Link>
                 <Link key={link.id} fontSize="14px" fontWeight="600">
                   {link.title}
                 </Link>
-              </Box>
+              </Link>
             );
           })}
           <Button variant="outline" colorScheme="blue" borderRadius="66px">
