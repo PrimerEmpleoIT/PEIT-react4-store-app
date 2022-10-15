@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { GrClose, GrCart } from "react-icons/gr";
 import {
   Stack,
   Box,
@@ -74,7 +76,12 @@ function Navbar() {
           </Button>
           <Flex>
             <Flex alignItems="center" gap="2">
-              <Button>C</Button>
+              <IconButton
+                aria-label="Cart"
+                size="lg"
+                icon={<GrCart />}
+                fontSize="20px"
+              />
               <Button>IMG</Button>
             </Flex>
           </Flex>
@@ -91,11 +98,11 @@ function Navbar() {
             aria-label="Open Menu"
             size="lg"
             mr={2}
+            icon={<GiHamburgerMenu />}
+            fontSize="30px"
             display={["flex", "flex", "none", "none"]}
             onClick={() => setDisplay("Flex")}
-          >
-            H
-          </IconButton>
+          />
         </Flex>
       </Flex>
 
@@ -116,6 +123,8 @@ function Navbar() {
             mr={2}
             aria-label="Close Menu"
             size="lg"
+            icon={<GrClose />}
+            fontSize="30px"
             onClick={() => setDisplay("none")}
           />
         </Flex>
