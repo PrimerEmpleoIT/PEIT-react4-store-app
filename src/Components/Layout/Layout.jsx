@@ -1,6 +1,6 @@
-import Footer from "./Footer"
-import Header from "./Header"
-import Navbar from "./Navbar"
+import Footer from "./Footer";
+import Header from "./Header";
+import Navbar from "../Navbar/Navbar";
 
 function Layout({ children }) {
   return (
@@ -10,6 +10,6 @@ function Layout({ children }) {
       {children}
       <Footer />
     </>
-  )
+  );
 }
-export default Layout
+export default Layout;
