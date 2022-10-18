@@ -46,7 +46,7 @@ function Navbar() {
 
   return (
     <>
-      <Flex
+      {/* <Flex
         borderBottom="1px"
         borderColor="gray.200"
         w="100%"
@@ -139,7 +139,7 @@ function Navbar() {
             </Flex>
           </Flex>
         </Flex>
-      </Flex>
+      </Flex>*/}
     </>
   );
 }
