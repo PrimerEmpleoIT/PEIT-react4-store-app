@@ -17,6 +17,7 @@ import {
   Hide,
 } from "@chakra-ui/react";
 import Logo from "./../../assets/navBar/Logo.svg";
+import ProfilePhoto from "./../../assets/navBar/ProfilePhoto.svg";
 function Navbar() {
   const links = [
     {
@@ -86,8 +87,8 @@ function Navbar() {
                 icon={<GrCart />}
                 fontSize="20px"
               />
-              <Button w={"36px"} h={"36px"}>
-                I
+              <Button w="60px" h="36px" bgColor="transparent">
+                <Image src={ProfilePhoto} />
               </Button>
             </Flex>
           </Flex>
@@ -114,21 +115,16 @@ function Navbar() {
                 size="lg"
                 icon={<GrCart />}
                 fontSize="20px"
+                Color="transparent"
               />
-              <Button w={"36px"} h={"36px"}>
-                I
+              <Button w="60px" h="36px" bgColor="transparent">
+                <Image src={ProfilePhoto} />
               </Button>
             </Flex>
             <MenuList>
               {links.map((link) => {
                 return <MenuItem key={link.id}>{link.title}</MenuItem>;
               })}
-
-              {/*             
-            <MenuItem command="⌘T">New Tab</MenuItem>
-            <MenuItem command="⌘N">New Window</MenuItem>
-            <MenuItem command="⌘⇧N">Open Closed Tab</MenuItem>
-            <MenuItem command="⌘O">Open File...</MenuItem> */}
             </MenuList>
           </Menu>
         </Stack>
