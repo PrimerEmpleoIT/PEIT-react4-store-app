@@ -33,8 +33,8 @@ function Header() {
                 Call us:(00)1234 5678
               </Text>
               <Show Show breakpoint="(min-width: 800px)">
-                <Icon as={FaFacebookSquare} color="#fff" h={10} />
-                <Icon as={AiFillInstagram} color="#fff" h={10} />
+                <Icon as={FaFacebookSquare} color="#fff" fontSize={21} />
+                <Icon as={AiFillInstagram} color="#fff" fontSize={22} />
               </Show>
             </Flex>
           </Box>

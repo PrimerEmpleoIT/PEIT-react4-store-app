@@ -95,7 +95,7 @@ function MenuDropDown() {
               <Text
                 textAlign="start"
                 fontSize="13px"
-                fontWeight="sembiold"
+                fontWeight="normal"
                 fontFamily="Poppins"
                 color="black"
               >
@@ -107,7 +107,7 @@ function MenuDropDown() {
               <Text
                 textAlign="start"
                 fontSize="13px"
-                fontWeight="semibold"
+                fontWeight="normal"
                 color="black"
                 fontFamily="Poppins"
               >
