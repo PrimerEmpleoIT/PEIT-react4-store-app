@@ -54,31 +54,32 @@ function Navbar() {
     <>
       <Flex
         borderBottom="1px"
-        borderColor="gray.200"
+        borderColor="gray"
         w="100%"
         justify="center"
         gap="20"
-        paddingX={["10px"]}
       >
         <Flex
           gap="8"
           h="92px"
           alignItems="center"
-          display={["none", "none", "flex", "flex"]}
+          display={["none", "none", "none", "flex"]}
         >
           <Image src={Logo} />
           {links.map((link) => {
             return (
-              <Box key={link.id}>
+              <Flex key={link.id}>
                 <Link fontSize="14px" fontWeight="600">
                   {link.title}
                 </Link>
-              </Box>
+              </Flex>
             );
           })}
-          <Button variant="outline" colorScheme="blue" borderRadius="66px">
-            Our deals
-          </Button>
+          <Flex>
+            <Button variant="outline" colorScheme="blue" borderRadius="66px">
+              Our deals
+            </Button>
+          </Flex>
           <Flex>
             <Flex alignItems="center" gap="2">
               <IconButton
@@ -94,10 +95,11 @@ function Navbar() {
           </Flex>
         </Flex>
       </Flex>
+
       {/* mobile view */}
       <Hide above="md">
         {" "}
-        <Stack borderBottom="2px" borderColor="gray.200" paddingY={2}>
+        <Stack borderBottom="1px" borderColor="gray" paddingY={2}>
           <Menu>
             <Flex justify="space-around" alignItems="center">
               <MenuButton
