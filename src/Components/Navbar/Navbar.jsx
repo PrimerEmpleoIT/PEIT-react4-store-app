@@ -52,24 +52,22 @@ function Navbar() {
 
   return (
     <>
-      <Flex
-        borderBottom="1px"
-        borderColor="gray"
-        w="100%"
-        justify="center"
-        gap="20"
-      >
+      <Flex borderBottom="1px" borderColor="gray" justify="center">
         <Flex
-          gap="8"
+          gap={{ base: "2", md: "3", lg: "6" }}
           h="92px"
           alignItems="center"
           display={["none", "none", "none", "flex"]}
         >
-          <Image src={Logo} />
+          <Image src={Logo} h="30px" w="40px" />
           {links.map((link) => {
             return (
               <Flex key={link.id}>
-                <Link fontSize="14px" fontWeight="600">
+                <Link
+                  fontSize={{ base: "12px", md: "12px", lg: "14px" }}
+                  fontWeight="600"
+                  fontFamily="Poppins"
+                >
                   {link.title}
                 </Link>
               </Flex>
