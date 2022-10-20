@@ -1,3 +1,32 @@
+import paypal from "@/assets/Footer/paypal.svg"
+import visa from "@/assets/Footer/visa.svg"
+import masterCard from "@/assets/Footer/masterCard.svg"
+import discover from "@/assets/Footer/discover.svg"
+import americanExpress from "@/assets/Footer/americanExpress.svg"
+
+export const footerIcons = [
+  {
+    id: crypto.randomUUID(),
+    icon: paypal,
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: visa,
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: masterCard,
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: discover,
+  },
+  {
+    id: crypto.randomUUID(),
+    icon: americanExpress,
+  },
+]
+
 export const footerList = [
   {
     id: crypto.randomUUID(),
