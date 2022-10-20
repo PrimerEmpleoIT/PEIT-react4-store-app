@@ -1,4 +1,4 @@
-import { extendTheme, theme as base } from "@chakra-ui/react"
+import { extendTheme, theme as base } from "@chakra-ui/react";
 
 const theme = extendTheme({
   breakpoints: {
@@ -50,6 +50,6 @@ const theme = extendTheme({
     unavailable: "rgba(201, 77, 63, 1)",
     contact: "rgba(1, 164, 255, 1)",
   },
-})
+});
 
-export default theme
+export default theme;
