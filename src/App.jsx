@@ -1,11 +1,11 @@
-import { Layout } from "./Components"
+import { Layout } from "./Components";
 
 function App() {
   return (
     <>
       <Layout></Layout>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
