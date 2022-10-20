@@ -1,55 +1,10 @@
-import { GiHamburgerMenu } from "react-icons/gi";
-import { GrClose, GrCart } from "react-icons/gr";
-import {
-  Stack,
-  Box,
-  Text,
-  Flex,
-  Image,
-  Button,
-  IconButton,
-  Link,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Show,
-  Hide,
-} from "@chakra-ui/react";
+import { GrCart } from "react-icons/gr";
+import { links } from "@/Helpers/navBarLinks";
+import { Flex, Image, Button, IconButton, Link, Hide } from "@chakra-ui/react";
 import Logo from "./../../assets/navBar/Logo.svg";
 import ProfilePhoto from "./../../assets/navBar/ProfilePhoto.svg";
+import NavBarMobileScreen from "./NavBarMobileScreen";
 function Navbar() {
-  const links = [
-    {
-      id: 1,
-      title: "laptops",
-    },
-    {
-      id: 2,
-      title: "Desktop PC",
-    },
-    {
-      id: 3,
-      title: "Networkin Devices",
-    },
-    {
-      id: 4,
-      title: "Printer & Scanners",
-    },
-    {
-      id: 5,
-      title: "Pc Parts",
-    },
-    {
-      id: 6,
-      title: "All Other Producs",
-    },
-    {
-      id: 7,
-      title: "Repairs",
-    },
-  ];
-
   return (
     <>
       <Flex borderBottom="1px" borderColor="gray" justify="center">
@@ -96,38 +51,7 @@ function Navbar() {
 
       {/* mobile view */}
       <Hide above="md">
-        {" "}
-        <Stack borderBottom="1px" borderColor="gray" paddingY={2}>
-          <Menu>
-            <Flex justify="space-around" alignItems="center">
-              <MenuButton
-                as={IconButton}
-                aria-label="Options"
-                icon={<GiHamburgerMenu />}
-                variant="outline"
-              />
-              <Image src={Logo} />
-              <Button variant="outline" colorScheme="blue" borderRadius="66px">
-                Our deals
-              </Button>
-              <IconButton
-                aria-label="Cart"
-                size="lg"
-                icon={<GrCart />}
-                fontSize="20px"
-                Color="transparent"
-              />
-              <Button w="60px" h="36px" bgColor="transparent">
-                <Image src={ProfilePhoto} />
-              </Button>
-            </Flex>
-            <MenuList>
-              {links.map((link) => {
-                return <MenuItem key={link.id}>{link.title}</MenuItem>;
-              })}
-            </MenuList>
-          </Menu>
-        </Stack>
+        <NavBarMobileScreen />
       </Hide>
     </>
   );
