@@ -1,5 +1,6 @@
-import { Layout } from "./Components"
+
 import Banner from "./Components/Banner/Banner"
+import { Layout } from "./Components";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
         <Banner/>
       </Layout>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
