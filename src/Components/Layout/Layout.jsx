@@ -1,6 +1,6 @@
 import Footer from "./Footer";
-import Header from "./Header";
-import Navbar from "../Navbar/Navbar";
+import Header from "./Header/Header";
+import Navbar from "./Navbar";
 
 function Layout({ children }) {
   return (
