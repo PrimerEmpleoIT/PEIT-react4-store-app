@@ -7,7 +7,7 @@ export default function Banner() {
   return (
     <>
       <Center> 
-        <Box w="80%" p={4} color="white" alignItems="center">
+        <Box w="80%" p={4} color="white">
         <ImageSlider slides={SlideData} />
         </Box>
       </Center>
