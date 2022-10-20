@@ -31,9 +31,7 @@ function NavBarMobileScreen() {
                 variant="outline"
               />
               <Image src={Logo} />
-              <Button variant="outline" colorScheme="blue" borderRadius="66px">
-                Our deals
-              </Button>
+
               <IconButton
                 aria-label="Cart"
                 size="lg"
