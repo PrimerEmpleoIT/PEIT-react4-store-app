@@ -1,3 +1,5 @@
+
+export * from "./index";
 export { default as Banner } from "./Banner/Banner"
 export { default as ImageSlider } from "./Banner/ImageSlider"
 export * from "./Banner/SlideData"
