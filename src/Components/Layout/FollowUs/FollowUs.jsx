@@ -26,6 +26,7 @@ function FollowUs() {
         <Box> hola</Box>
         <Box> hola</Box>
         <Box> hola</Box>
+        <Box> hola</Box>
       </SimpleGrid>
     </>
   );
