@@ -1,12 +1,15 @@
+import NewProducts from "./Components/Layout/NewProducts/NewProducts";
+import Sponsors from "./Components/Sponsors/Sponsors";
 import Banner from "./Components/Banner/Banner";
-import { FollowUs, Layout } from "./Components";
+import { Layout } from "./Components";
 
 function App() {
   return (
     <>
       <Layout>
         <Banner />
-        <FollowUs />
+        <NewProducts />
+        <Sponsors />
       </Layout>
     </>
   );
