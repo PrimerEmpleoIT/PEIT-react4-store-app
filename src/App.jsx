@@ -1,9 +1,9 @@
-import NewProducts from "./Components/Layout/NewProducts/NewProducts";
+import Layout from "./Components/Layout/Layout";
 
 function App() {
   return (
     <>
-      <NewProducts />
+      <Layout />
     </>
   );
 }
