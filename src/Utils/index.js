@@ -1,1 +1,1 @@
-export { default as Utils } from "./Utils"
+export { default as AcorddionFooter } from "../Components/Layout/Footer/AccordionFooter"
