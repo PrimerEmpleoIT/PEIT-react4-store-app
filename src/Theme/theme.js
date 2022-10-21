@@ -46,6 +46,7 @@ const theme = extendTheme({
     empty: "rgba(202, 205, 216, 1)",
     logo: "rgba(1, 86, 255, 1)",
     divBg: "rgba(245, 247, 255, 1)",
+    light: "rgba(229, 236, 241, 1)",
     headerFont: "rgba(172, 172, 172, 1)",
     btnDark: "rgba(37, 41, 49, 1)",
     available: "rgba(120, 169, 98, 1)",
