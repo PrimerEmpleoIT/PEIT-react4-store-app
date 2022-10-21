@@ -1,12 +1,12 @@
-
-import Banner from "./Components/Banner/Banner"
-import { Layout } from "./Components";
+import Banner from "./Components/Banner/Banner";
+import { FollowUs, Layout } from "./Components";
 
 function App() {
   return (
     <>
       <Layout>
-        <Banner/>
+        <Banner />
+        <FollowUs />
       </Layout>
     </>
   );
