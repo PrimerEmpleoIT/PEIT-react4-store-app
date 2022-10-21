@@ -1,14 +1,13 @@
 import Footer from "./Footer";
 import Header from "./Header";
 import Navbar from "./Navbar";
-import NewProducts from "./NewProducts/NewProducts";
 
-function Layout() {
+function Layout({ children }) {
   return (
     <>
       <Header />
       <Navbar />
-      <NewProducts />
+      {children}
       <Footer />
     </>
   );

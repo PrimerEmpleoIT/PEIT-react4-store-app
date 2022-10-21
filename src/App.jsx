@@ -1,9 +1,12 @@
 import Layout from "./Components/Layout/Layout";
+import NewProducts from "./Components/Layout/NewProducts/NewProducts";
 
 function App() {
   return (
     <>
-      <Layout />
+      <Layout>
+        <NewProducts />
+      </Layout>
     </>
   );
 }
