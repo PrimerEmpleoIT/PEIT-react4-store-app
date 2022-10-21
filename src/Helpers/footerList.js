@@ -83,4 +83,16 @@ export const footerList = [
       "Infinity Gaming Notebooks",
     ],
   },
+  {
+    id: crypto.randomUUID(),
+    title: "Address",
+    list: [
+      "Address: 1234 Street Adress City Address, 1234",
+      "Phones: (00) 1234 5678",
+      "We are open: Monday-Thursday: 9:00 AM - 5:30 PM",
+      "Friday: 9:00 AM - 6:00 PM",
+      "Saturday: 11:00 AM - 5:00 PM",
+      "E-mail: shop@email.com",
+    ],
+  },
 ]
