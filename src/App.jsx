@@ -1,9 +1,11 @@
+import NewProducts from "./Components/Layout/NewProducts/NewProducts";
+
 function App() {
   return (
     <>
-      <Layout></Layout>
+      <NewProducts />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
