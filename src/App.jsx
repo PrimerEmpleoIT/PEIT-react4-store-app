@@ -1,14 +1,16 @@
-import Layout from "./Components/Layout/Layout";
-import NewProducts from "./Components/Layout/NewProducts/NewProducts";
+import NewProducts from "./Components/Layout/NewProducts/NewProducts"
+import Banner from "./Components/Banner/Banner"
+import { Layout } from "./Components"
 
 function App() {
   return (
     <>
-      <Layout>
+      <Layout>        
+        <Banner/>
         <NewProducts />
       </Layout>
     </>
   );
 }
 
-export default App;
+export default App
