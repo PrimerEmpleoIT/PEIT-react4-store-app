@@ -1,3 +1,5 @@
+import Logo from '@/assets/navBar/Logo.svg'
+import ProfilePhoto from '@/assets/navBar/ProfilePhoto.svg'
 import { links } from '@/Helpers/navBarLinks'
 import {
   Button,
@@ -15,8 +17,6 @@ import {
 } from '@chakra-ui/react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { GrCart, GrFormNext } from 'react-icons/gr'
-import Logo from './../../assets/navBar/Logo.svg'
-import ProfilePhoto from './../../assets/navBar/ProfilePhoto.svg'
 
 function NavBarMobileScreen() {
   const { isOpen, onOpen, onClose } = useDisclosure()
