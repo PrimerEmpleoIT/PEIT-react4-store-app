@@ -1,3 +1,3 @@
-export * from "./footerList"
-export * from "./navBarLinks"
-export * from "./products"
+export * from './footerList'
+export * from './navBarLinks'
+export * from './products'

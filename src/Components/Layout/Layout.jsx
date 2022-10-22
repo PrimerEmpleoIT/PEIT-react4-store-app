@@ -1,4 +1,4 @@
-import { Footer, Header, Navbar } from ".."
+import { Footer, Header, Navbar } from '..'
 
 function Layout({ children }) {
   return (
@@ -8,6 +8,6 @@ function Layout({ children }) {
       {children}
       <Footer />
     </>
-  );
+  )
 }
 export default Layout
