@@ -1,5 +1,3 @@
-
-export * from "./index";
 export { default as Banner } from "./Banner/Banner"
 export { default as ImageSlider } from "./Banner/ImageSlider"
 export * from "./Banner/SlideData"
@@ -10,3 +8,7 @@ export { default as MenuDropDown } from "./Layout/Header/MenuDropDown"
 export { default as Layout } from "./Layout/Layout"
 export { default as NavBarMobileScreen } from "./Navbar/NavBarMobileScreen"
 export { default as Navbar } from "./Navbar/Navbar"
+export { default as NewProducts } from "./NewProducts/NewProducts"
+export { default as StarRating } from "./NewProducts/StarRating"
+export { default as Sponsors } from "./Sponsors/Sponsors"
+export { default as Testimonials } from "./Testimonials/Testimonials"

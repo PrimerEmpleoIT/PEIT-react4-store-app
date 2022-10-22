@@ -1,6 +1,6 @@
-import { GiHamburgerMenu } from "react-icons/gi";
-import { GrCart, GrFormNext } from "react-icons/gr";
-import { links } from "@/Helpers/navBarLinks";
+import { GiHamburgerMenu } from "react-icons/gi"
+import { GrCart, GrFormNext } from "react-icons/gr"
+import { links } from "@/Helpers/navBarLinks"
 import {
   Text,
   Flex,
@@ -15,12 +15,12 @@ import {
   useDisclosure,
   DrawerCloseButton,
   Box,
-} from "@chakra-ui/react";
-import Logo from "./../../assets/navBar/Logo.svg";
-import ProfilePhoto from "./../../assets/navBar/ProfilePhoto.svg";
+} from "@chakra-ui/react"
+import Logo from "./../../assets/navBar/Logo.svg"
+import ProfilePhoto from "./../../assets/navBar/ProfilePhoto.svg"
 
 function NavBarMobileScreen() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
     <>
@@ -44,7 +44,7 @@ function NavBarMobileScreen() {
           size="lg"
           icon={<GrCart />}
           fontSize="20px"
-          Color="transparent"
+          color="transparent"
         />
         <Button w="60px" h="36px" bgColor="transparent">
           <Image src={ProfilePhoto} />
@@ -72,7 +72,7 @@ function NavBarMobileScreen() {
                   </Text>
                   <GrFormNext />
                 </Flex>
-              );
+              )
             })}
             <Button variant="outline" colorScheme="blue" borderRadius="66px">
               Our deals
@@ -81,7 +81,7 @@ function NavBarMobileScreen() {
         </DrawerContent>
       </Drawer>
     </>
-  );
+  )
 }
 
-export default NavBarMobileScreen;
+export default NavBarMobileScreen
