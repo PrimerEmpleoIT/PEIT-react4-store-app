@@ -1,30 +1,30 @@
 export const links = [
   {
     id: 1,
-    title: "Laptops",
+    title: 'Laptops',
   },
   {
     id: 2,
-    title: "Desktop PC",
+    title: 'Desktop PC',
   },
   {
     id: 3,
-    title: "Networkin Devices",
+    title: 'Networkin Devices',
   },
   {
     id: 4,
-    title: "Printer & Scanners",
+    title: 'Printer & Scanners',
   },
   {
     id: 5,
-    title: "Pc Parts",
+    title: 'Pc Parts',
   },
   {
     id: 6,
-    title: "All Other Producs",
+    title: 'All Other Producs',
   },
   {
     id: 7,
-    title: "Repairs",
+    title: 'Repairs',
   },
-];
+]

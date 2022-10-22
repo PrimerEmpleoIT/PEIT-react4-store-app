@@ -1,7 +1,4 @@
-import NewProducts from "./Components/Layout/NewProducts/NewProducts";
-import Sponsors from "./Components/Sponsors/Sponsors";
-import Banner from "./Components/Banner/Banner";
-import { Layout, FollowUs } from "./Components";
+import { Banner, FollowUs, Layout, NewProducts, Sponsors } from './Components'
 
 function App() {
   return (
@@ -13,7 +10,7 @@ function App() {
         <FollowUs />
       </Layout>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
