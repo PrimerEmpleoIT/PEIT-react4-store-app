@@ -1,34 +1,45 @@
 import React from "react";
-import { Box, Flex, Image, SimpleGrid, Stack, Text } from "@chakra-ui/react";
+import followUs from "./../../../Helpers/followUs";
 
-import desk3 from "@/assets/FollowUs/desk2.svg";
+import { Flex, Hide, Image, SimpleGrid, Stack, Text } from "@chakra-ui/react";
 
 function FollowUs() {
   return (
-    <>
-      <SimpleGrid
-        columns={6}
-        spacing={1}
-        w="100%"
-        justifyItems="center"
-        paddingX={20}
-      >
-        <Flex w="230px">
-          <Text>
-            <Image src={desk3} />
-            If you’ve recently made a desktop PC or laptop purchase, you might
-            want to consider adding peripherals to enhance your home office
-            setup, your gaming rig, or your business workspace...
-          </Text>
-        </Flex>
-        <Box> hola</Box>
-        <Box> hola</Box>
-        <Box> hola</Box>
-        <Box> hola</Box>
-        <Box> hola</Box>
-        <Box> hola</Box>
-      </SimpleGrid>
-    </>
+    <Hide below="lg">
+      <Stack>
+        <SimpleGrid
+          gap={1}
+          columns={6}
+          w="100%"
+          justifyItems="center"
+          paddingX={20}
+        >
+          {followUs.map((i) => {
+            return (
+              <Flex
+                direction="column"
+                key={i.id}
+                maxW="235px"
+                mH="322px"
+                mb={3}
+              >
+                <Image src={i.img} mW="235px" mH="152px" alt="notebook" />
+                <Text
+                  mt={1}
+                  textAlign="center"
+                  fontFamily="Poppins"
+                  fontSize="12px"
+                  fontWeight="medium"
+                >
+                  {" "}
+                  {i.description}
+                </Text>
+              </Flex>
+            );
+          })}
+        </SimpleGrid>
+      </Stack>
+    </Hide>
   );
 }
 
