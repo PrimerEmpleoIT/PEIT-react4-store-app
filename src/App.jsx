@@ -1,4 +1,4 @@
-import { Banner, Layout, NewProducts, Sponsors } from "./Components"
+import { Banner, FollowUs, Layout, NewProducts, Sponsors } from './Components'
 
 function App() {
   return (
@@ -7,6 +7,7 @@ function App() {
         <Banner />
         <NewProducts />
         <Sponsors />
+        <FollowUs />
       </Layout>
     </>
   )
