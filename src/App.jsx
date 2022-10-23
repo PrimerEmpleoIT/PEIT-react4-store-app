@@ -5,6 +5,7 @@ import {
   NewProducts,
   Sponsors,
   Testimonials,
+  Benefits,
 } from './Components'
 
 function App() {
@@ -12,10 +13,11 @@ function App() {
     <>
       <Layout>
         <Banner />
-        <NewProducts />
+        
         <Sponsors />
         <FollowUs />
         <Testimonials />
+        <Benefits />
       </Layout>
     </>
   )
