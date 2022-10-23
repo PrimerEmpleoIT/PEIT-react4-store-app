@@ -4,7 +4,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 const ImageSlider = ({ slides }) => {
   return (
-    <Carousel infiniteLoop>
+    <Carousel infiniteLoop showIndicators={false} showStatus={false}>
       {slides.map((slide) => {
         return <Image src={slide.image} height='auto' width='800px' />
       })}
