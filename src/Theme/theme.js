@@ -52,6 +52,8 @@ const theme = extendTheme({
     available: 'rgba(120, 169, 98, 1)',
     unavailable: 'rgba(201, 77, 63, 1)',
     contact: 'rgba(1, 164, 255, 1)',
+    ads: 'rgba(39, 37, 96, 1)',
+    div: 'rgba(0, 174, 184, 1)',
   },
 })
 
