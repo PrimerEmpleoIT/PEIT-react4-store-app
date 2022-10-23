@@ -1,16 +1,15 @@
-import { Image } from "@chakra-ui/react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-
+import { Image } from '@chakra-ui/react'
+import { Carousel } from 'react-responsive-carousel'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 const ImageSlider = ({ slides }) => {
   return (
-    <Carousel infiniteLoop>
+    <Carousel infiniteLoop showIndicators={false} showStatus={false}>
       {slides.map((slide) => {
-        return <Image src={slide.image} height="auto" width="800px" />;
+        return <Image src={slide.image} height='auto' width='800px' />
       })}
     </Carousel>
-  );
-};
+  )
+}
 
-export default ImageSlider;
+export default ImageSlider

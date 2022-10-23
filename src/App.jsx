@@ -1,7 +1,11 @@
-import NewProducts from "./Components/Layout/NewProducts/NewProducts";
-import Sponsors from "./Components/Sponsors/Sponsors";
-import Banner from "./Components/Banner/Banner";
-import { Layout } from "./Components";
+import {
+  Banner,
+  FollowUs,
+  Layout,
+  NewProducts,
+  Sponsors,
+  Testimonials,
+} from './Components'
 
 function App() {
   return (
@@ -10,9 +14,11 @@ function App() {
         <Banner />
         <NewProducts />
         <Sponsors />
+        <FollowUs />
+        <Testimonials />
       </Layout>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
