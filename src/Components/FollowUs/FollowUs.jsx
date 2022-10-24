@@ -10,7 +10,7 @@ function FollowUs() {
           columns={6}
           w='100%'
           justifyItems='center'
-          paddingX={20}
+          paddingX={20} 
         >
           {followUs.map((i) => {
             return (

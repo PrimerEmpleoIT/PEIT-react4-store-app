@@ -6,6 +6,7 @@ import {
   NewProductSlider,
   Sponsors,
   Testimonials,
+  Benefits,
 } from "./Components";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Sponsors />
         <FollowUs />
         <Testimonials />
+        <Benefits />
       </Layout>
     </>
   );
