@@ -6,6 +6,7 @@ import {
   NewProductSlider,
   Sponsors,
   Testimonials,
+  Benefits,
 } from "./Components";
 
 function App() {
