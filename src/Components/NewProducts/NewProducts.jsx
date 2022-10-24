@@ -87,7 +87,7 @@ export default function NewProducts() {
         </Container>
         <Container>
           <Box style={styles.card}>
-            <h4 style={styles.stockOn}>{NewData[1].Stock}</h4>
+            <h4 style={styles.stockOff}>{NewData[1].Stock}</h4>
             <img src={NewData[1].img} alt="" />
             <StarRating />
             <p>{NewData[1].Description}</p>
@@ -117,7 +117,7 @@ export default function NewProducts() {
         </Container>
         <Container>
           <Box style={styles.card}>
-            <h4 style={styles.stockOn}>{NewData[4].Stock}</h4>
+            <h4 style={styles.stockOff}>{NewData[4].Stock}</h4>
             <img src={NewData[4].img} alt="" />
             <StarRating />
             <p>{NewData[4].Description}</p>
@@ -137,7 +137,7 @@ export default function NewProducts() {
         </Container>
         <Container>
           <Box style={styles.card}>
-            <h4 style={styles.stockOn}>{NewData[0].Stock}</h4>
+            <h4 style={styles.stockOff}>{NewData[0].Stock}</h4>
             <img src={NewData[0].img} alt="" />
             <StarRating />
             <p>{NewData[0].Description}</p>
