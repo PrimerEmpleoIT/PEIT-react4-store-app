@@ -10,30 +10,26 @@ import {
   Banner,
   FollowUs,
   Layout,
-  NewProducts,
+  NewProductSlider,
   Sponsors,
   Testimonials,
-} from './Components'
->>>>>>> 2c2b1e9f4c23015d9956c14096a835efad93b141
+  Benefits,
+} from "./Components";
 
 function App() {
   return (
     <>
       <Layout>
         <Banner />
-        <NewProducts />
-<<<<<<< HEAD
-        <Banner />
-        <Sponsors />
-=======
+        <NewProductSlider />
         <Ads />
         <Sponsors />
         <FollowUs />
         <Testimonials />
->>>>>>> 2c2b1e9f4c23015d9956c14096a835efad93b141
+        <Benefits />
       </Layout>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
