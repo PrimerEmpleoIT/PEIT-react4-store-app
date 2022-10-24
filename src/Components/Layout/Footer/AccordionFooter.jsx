@@ -1,4 +1,4 @@
-import { footerList } from "@/Helpers/footerList"
+import { footerList } from '@/Helpers/footerList'
 import {
   Accordion,
   AccordionButton,
@@ -10,11 +10,11 @@ import {
   Show,
   SimpleGrid,
   Text,
-} from "@chakra-ui/react"
+} from '@chakra-ui/react'
 
 function AccordionFooter() {
   return (
-    <Show below={"lg"}>
+    <Show below={'lg'}>
       <Accordion allowToggle>
         {footerList.map((lists) => {
           const { id, title, list } = lists
@@ -23,35 +23,35 @@ function AccordionFooter() {
             <div key={id}>
               <AccordionItem>
                 <Text
-                  fontFamily={"body"}
-                  fontWeight={"bold"}
-                  fontSize={"small"}
-                  color={"light"}
+                  fontFamily={'body'}
+                  fontWeight={'bold'}
+                  fontSize={'small'}
+                  color={'light'}
                 >
                   <AccordionButton>
-                    <Box flex="1" textAlign="left">
+                    <Box flex='1' textAlign='left'>
                       {title}
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                 </Text>
                 <AccordionPanel
-                  fontFamily={"body"}
-                  fontWeight={"regular"}
-                  fontSize={"review"}
+                  fontFamily={'body'}
+                  fontWeight={'regular'}
+                  fontSize={'review'}
                   pb={4}
                 >
                   <SimpleGrid column={1} gap={1}>
                     {list.map((listItem, i) => (
                       <Text
                         key={i}
-                        fontWeight={"regular"}
-                        fontSize={"review"}
-                        color={"disable"}
+                        fontWeight={'regular'}
+                        fontSize={'review'}
+                        color={'disable'}
                       >
                         <Highlight
-                          query={["(00) 1234 5678", "shop@email.com"]}
-                          styles={{ color: "contact" }}
+                          query={['(00) 1234 5678', 'shop@email.com']}
+                          styles={{ color: 'contact' }}
                         >
                           {listItem}
                         </Highlight>

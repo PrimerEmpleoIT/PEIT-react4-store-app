@@ -1,62 +1,59 @@
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import StarRating from "./StarRating";
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick-theme.css'
+import 'slick-carousel/slick/slick.css'
+import StarRating from './StarRating'
 
 const styles = {
   card: {
-    padding: "1rem",
-    margin: "0.5rem",
-    backgroundColor: "#fff",
-    borderRadius: "3px",
+    padding: '1rem',
+    margin: '0.5rem',
+    backgroundColor: '#fff',
+    borderRadius: '3px',
 
-    cursor: "pointer",
+    cursor: 'pointer',
   },
   price: {
-    fontSize: "20px",
-    fontWeight: "bold",
+    fontSize: '20px',
+    fontWeight: 'bold',
   },
   stockOn: {
-    fontSize: "10px",
-    marginLeft: "15px",
-    color: "green",
+    fontSize: '10px',
+    marginLeft: '15px',
+    color: 'green',
   },
   stockOff: {
-    fontSize: "10px",
-    marginLeft: "15px",
-    color: "red",
+    fontSize: '10px',
+    marginLeft: '15px',
+    color: 'red',
   },
-};
+}
 
 const producto1 = {
-  Stock: "in stock",
-  img: "/gabinete.jpg",
+  Stock: 'in stock',
+  img: '/gabinete.jpg',
   Reviews: 5,
-  Description: "ExDisplay: MSI pro 16 Flex-036AU 15.6 Multitouch All-In-One",
+  Description: 'ExDisplay: MSI pro 16 Flex-036AU 15.6 Multitouch All-In-One',
   OldPrice: 499,
   Price: 1200,
-};
+}
 const producto2 = {
-  Stock: "check availability",
-  img: "/Monitor.jpg",
+  Stock: 'check availability',
+  img: '/Monitor.jpg',
   Reviews: 4,
-  Description: "ExDisplay: MSI pro 16 Flex-036AU 15.6 Multitouch All-In-One",
+  Description: 'ExDisplay: MSI pro 16 Flex-036AU 15.6 Multitouch All-In-One',
   OldPrice: 499,
   Price: 800,
-};
+}
 const producto3 = {
-  Stock: "in stock",
-  img: "/Notebook.jpg",
+  Stock: 'in stock',
+  img: '/Notebook.jpg',
   Reviews: 1,
-  Description: "ExDisplay: MSI pro 16 Flex-036AU 15.6 Multitouch All-In-One",
+  Description: 'ExDisplay: MSI pro 16 Flex-036AU 15.6 Multitouch All-In-One',
   OldPrice: 499,
   Price: 2500,
-};
+}
 
-let slides = Math.round(screen.width / 800) + 4;
-console.log(slides);
-console.log(screen.width);
+let slides = Math.round(screen.width / 800) + 4
 
 export default function NewProducts() {
   var settings = {
@@ -65,20 +62,20 @@ export default function NewProducts() {
     speed: 500,
     slidesToShow: slides,
     slidesToScroll: 1,
-  };
+  }
   return (
     <>
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <span style={{ fontSize: "30px", padding: "20px" }}>New Products:</span>
+      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+        <span style={{ fontSize: '30px', padding: '20px' }}>New Products:</span>
         <u
           style={{
-            textAling: "right",
-            color: "blue",
-            marginRight: "20px",
-            cursor: "pointer",
+            textAling: 'right',
+            color: 'blue',
+            marginRight: '20px',
+            cursor: 'pointer',
           }}
         >
-          see all new products{" "}
+          see all new products{' '}
         </u>
       </div>
 
@@ -86,7 +83,7 @@ export default function NewProducts() {
         <div>
           <div style={styles.card}>
             <h4 style={styles.stockOn}>{producto1.Stock}</h4>
-            <img src="Gabinete.jpg" alt="" />
+            <img src='Gabinete.jpg' alt='' />
             <StarRating />
             <p>{producto1.Description}</p>
             <del> $ {producto1.OldPrice.toFixed(2)}</del>
@@ -96,7 +93,7 @@ export default function NewProducts() {
         <div>
           <div style={styles.card}>
             <h4 style={styles.stockOff}>{producto2.Stock}</h4>
-            <img src="Monitor.jpg" alt="" />
+            <img src='Monitor.jpg' alt='' />
             <StarRating />
             <p>{producto2.Description}</p>
             <del> $ {producto2.OldPrice.toFixed(2)}</del>
@@ -106,7 +103,7 @@ export default function NewProducts() {
         <div>
           <div style={styles.card}>
             <h4 style={styles.stockOn}>{producto3.Stock}</h4>
-            <img src="Notebook.jpg" alt="" />
+            <img src='Notebook.jpg' alt='' />
             <StarRating />
             <p>{producto3.Description}</p>
             <del> $ {producto3.OldPrice.toFixed(2)}</del>
@@ -116,7 +113,7 @@ export default function NewProducts() {
         <div>
           <div style={styles.card}>
             <h4 style={styles.stockOn}>{producto1.Stock}</h4>
-            <img src="Gabinete.jpg" alt="" />
+            <img src='Gabinete.jpg' alt='' />
             <StarRating />
             <p>{producto1.Description}</p>
             <del> $ {producto1.OldPrice.toFixed(2)}</del>
@@ -126,7 +123,7 @@ export default function NewProducts() {
         <div>
           <div style={styles.card}>
             <h4 style={styles.stockOff}>{producto2.Stock}</h4>
-            <img src="Monitor.jpg" alt="" />
+            <img src='Monitor.jpg' alt='' />
             <StarRating />
             <p>{producto2.Description}</p>
             <del> $ {producto2.OldPrice.toFixed(2)}</del>
@@ -136,7 +133,7 @@ export default function NewProducts() {
         <div>
           <div style={styles.card}>
             <h4 style={styles.stockOn}>{producto3.Stock}</h4>
-            <img src="Notebook.jpg" alt="" />
+            <img src='Notebook.jpg' alt='' />
             <StarRating />
             <p>{producto3.Description}</p>
             <del> $ {producto3.OldPrice.toFixed(2)}</del>
@@ -146,7 +143,7 @@ export default function NewProducts() {
         <div>
           <div style={styles.card}>
             <h4 style={styles.stockOff}>{producto1.Stock}</h4>
-            <img src="Gabinete.jpg" alt="" />
+            <img src='Gabinete.jpg' alt='' />
             <StarRating />
             <p>{producto1.Description}</p>
             <del> $ {producto1.OldPrice.toFixed(2)}</del>
@@ -155,5 +152,5 @@ export default function NewProducts() {
         </div>
       </Slider>
     </>
-  );
+  )
 }
