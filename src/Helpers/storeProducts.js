@@ -92,7 +92,7 @@ const storeProducts = [
           "Windows 10 Home - MSI recommends Windows 11 Pro for business  FREE Upgrade to Windows 11 23.8 IPS Grade Panel LED Backlight (1920*1080 FHD)",
         details:
           "Featured MSI Super Charger technology that supports fast USB Sleep-and-Charge with auto-detection 178° wide viewing angle screen          ",
-        specs: null,
+        specs: "MSI GS Series",
         price: "33443221.00",
         images:
           "https://asset.msi.com/resize/image/global/product/product_1652084089f186edc14f9d018b77a37b5aee4f5a5a.png62405b38c58fe0f07fcef2367d8a9ba1/400.png",
@@ -107,7 +107,7 @@ const storeProducts = [
           "Windows 10 Home - MSI recommends Windows 11 Pro for business  FREE Upgrade to Windows 11 23.8 IPS Grade Panel LED Backlight (1920*1080 FHD)",
         details:
           "Featured MSI Super Charger technology that supports fast USB Sleep-and-Charge with auto-detection 178° wide viewing angle screen          ",
-        specs: null,
+        specs: "MSI GT Series",
         price: "33443221.00",
         images:
           "https://asset.msi.com/resize/image/global/product/product_1652084089f186edc14f9d018b77a37b5aee4f5a5a.png62405b38c58fe0f07fcef2367d8a9ba1/400.png",
@@ -122,7 +122,7 @@ const storeProducts = [
           "Windows 10 Home - MSI recommends Windows 11 Pro for business  FREE Upgrade to Windows 11 23.8 IPS Grade Panel LED Backlight (1920*1080 FHD)",
         details:
           "Featured MSI Super Charger technology that supports fast USB Sleep-and-Charge with auto-detection 178° wide viewing angle screen          ",
-        specs: null,
+        specs: "MSI GL Series",
         price: "33443221.00",
         images:
           "https://asset.msi.com/resize/image/global/product/product_1652084089f186edc14f9d018b77a37b5aee4f5a5a.png62405b38c58fe0f07fcef2367d8a9ba1/400.png",
@@ -137,7 +137,7 @@ const storeProducts = [
           "Windows 10 Home - MSI recommends Windows 11 Pro for business  FREE Upgrade to Windows 11 23.8 IPS Grade Panel LED Backlight (1920*1080 FHD)",
         details:
           "Featured MSI Super Charger technology that supports fast USB Sleep-and-Charge with auto-detection 178° wide viewing angle screen          ",
-        specs: null,
+        specs: "MSI GE Series",
         price: "33443221.00",
         images:
           "https://asset.msi.com/resize/image/global/product/product_1652084089f186edc14f9d018b77a37b5aee4f5a5a.png62405b38c58fe0f07fcef2367d8a9ba1/400.png",
@@ -152,7 +152,7 @@ const storeProducts = [
           "Windows 10 Home - MSI recommends Windows 11 Pro for business  FREE Upgrade to Windows 11 23.8 IPS Grade Panel LED Backlight (1920*1080 FHD)",
         details:
           "Featured MSI Super Charger technology that supports fast USB Sleep-and-Charge with auto-detection 178° wide viewing angle screen          ",
-        specs: null,
+        specs: "MSI GE Series",
         price: "33443221.00",
         images:
           "https://asset.msi.com/resize/image/global/product/product_1652084089f186edc14f9d018b77a37b5aee4f5a5a.png62405b38c58fe0f07fcef2367d8a9ba1/400.png",
@@ -284,7 +284,7 @@ const storeProducts = [
           "Windows 10 Home - MSI recommends Windows 11 Pro for business  FREE Upgrade to Windows 11 23.8 IPS Grade Panel LED Backlight (1920*1080 FHD)",
         details:
           "Featured MSI Super Charger technology that supports fast USB Sleep-and-Charge with auto-detection 178° wide viewing angle screen          ",
-        specs: null,
+        specs: "MSI Infinute Series",
         price: "33443221.00",
         images:
           "https://http2.mlstatic.com/D_NQ_NP_640887-MLA51095738517_082022-O.webp",
@@ -299,7 +299,7 @@ const storeProducts = [
           "Windows 10 Home - MSI recommends Windows 11 Pro for business  FREE Upgrade to Windows 11 23.8 IPS Grade Panel LED Backlight (1920*1080 FHD)",
         details:
           "Featured MSI Super Charger technology that supports fast USB Sleep-and-Charge with auto-detection 178° wide viewing angle screen          ",
-        specs: null,
+        specs: "MSI Triden",
         price: "33443221.00",
         images:
           "https://http2.mlstatic.com/D_NQ_NP_640887-MLA51095738517_082022-O.webp",
@@ -314,7 +314,7 @@ const storeProducts = [
           "Windows 10 Home - MSI recommends Windows 11 Pro for business  FREE Upgrade to Windows 11 23.8 IPS Grade Panel LED Backlight (1920*1080 FHD)",
         details:
           "Featured MSI Super Charger technology that supports fast USB Sleep-and-Charge with auto-detection 178° wide viewing angle screen          ",
-        specs: null,
+        specs: "MSI GL Series",
         price: "33443221.00",
         images:
           "https://http2.mlstatic.com/D_NQ_NP_640887-MLA51095738517_082022-O.webp",
@@ -329,7 +329,7 @@ const storeProducts = [
           "Windows 10 Home - MSI recommends Windows 11 Pro for business  FREE Upgrade to Windows 11 23.8 IPS Grade Panel LED Backlight (1920*1080 FHD)",
         details:
           "Featured MSI Super Charger technology that supports fast USB Sleep-and-Charge with auto-detection 178° wide viewing angle screen          ",
-        specs: null,
+        specs: "MSI Nightblade",
         price: "33443221.00",
         images:
           "https://http2.mlstatic.com/D_NQ_NP_640887-MLA51095738517_082022-O.webp",
