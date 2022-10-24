@@ -1,4 +1,5 @@
 import {
+  Ads,
   Banner,
   FollowUs,
   Layout,
@@ -14,6 +15,8 @@ function App() {
       <Layout>
         <Banner />
         
+        <NewProducts />
+        <Ads />
         <Sponsors />
         <FollowUs />
         <Testimonials />
