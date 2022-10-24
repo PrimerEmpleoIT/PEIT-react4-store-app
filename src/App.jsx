@@ -3,24 +3,24 @@ import {
   Banner,
   FollowUs,
   Layout,
-  NewProducts,
+  NewProductSlider,
   Sponsors,
   Testimonials,
-} from './Components'
+} from "./Components";
 
 function App() {
   return (
     <>
       <Layout>
         <Banner />
-        <NewProducts />
+        <NewProductSlider />
         <Ads />
         <Sponsors />
         <FollowUs />
         <Testimonials />
       </Layout>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
