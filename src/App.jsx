@@ -1,13 +1,13 @@
 import {
   Ads,
   Banner,
+  Benefits,
   FollowUs,
   Layout,
   NewProductSlider,
   Sponsors,
   Testimonials,
-  Benefits,
-} from "./Components";
+} from './Components'
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Benefits />
       </Layout>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
