@@ -59,7 +59,7 @@ export default function NewProducts() {
   return (
     <>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-        <span style={{ fontSize: '22px', padding: '20px', fontWeight: 'bold' }}>
+        <span style={{ fontSize: '22px', padding: '22px', fontWeight: 'bold' }}>
           New Products
         </span>
         <u
