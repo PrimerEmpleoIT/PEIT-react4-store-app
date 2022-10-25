@@ -2,14 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const products = createSlice({
   name: "Products", // nombre del estado que se va crear
-  initialState: [
+  initialState: {
     // el estado con el cual se va inicializar
-    {
-      loading: true,
-      data: [],
-      error: null,
-    },
-  ],
+
+    loading: true,
+    data: {},
+    error: null,
+  },
 
   //Reducers que van a manejar el estado por el momento no asincronico  y las actions
   reducers: {

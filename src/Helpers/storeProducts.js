@@ -1,4 +1,4 @@
-const storeProducts = [
+export const storeProducts = [
   {
     id: 1,
     name: "Custom Builds",
