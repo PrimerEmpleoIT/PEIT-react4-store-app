@@ -1,3 +1,5 @@
+import { store } from "@/Store";
+import { Provider } from "react-redux";
 import {
   Ads,
   Banner,
@@ -12,15 +14,17 @@ import {
 function App() {
   return (
     <>
-      <Layout>
-        <Banner />
-        <NewProductSlider />
-        <Ads />
-        <Sponsors />
-        <FollowUs />
-        <Testimonials />
-        <Benefits />
-      </Layout>
+      <Provider store={store}>
+        <Layout>
+          <Banner />
+          <NewProductSlider />
+          <Ads />
+          <Sponsors />
+          <FollowUs />
+          <Testimonials />
+          <Benefits />
+        </Layout>
+      </Provider>
     </>
   );
 }
