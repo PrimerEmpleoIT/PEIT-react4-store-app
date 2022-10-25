@@ -1,6 +1,5 @@
 import { store } from '@/Store'
 import { Provider } from 'react-redux'
-
 import {
   Ads,
   Banner,
@@ -11,10 +10,12 @@ import {
   Sponsors,
   Testimonials,
 } from './Components'
+import { ProyectRoutes } from './Routes'
 
 function App() {
   return (
     <>
+      <ProyectRoutes />
       <Provider store={store}>
         <Layout>
           <Banner />
