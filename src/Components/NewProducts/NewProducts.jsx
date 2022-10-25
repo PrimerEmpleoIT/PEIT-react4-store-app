@@ -53,6 +53,7 @@ export default function NewProducts() {
     slidesToShow: slides,
     slidesToScroll: 5,
   }
+
   return (
     <>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
@@ -74,76 +75,22 @@ export default function NewProducts() {
       </div>
 
       <Slider {...settings}>
-        <Container>
-          <Box style={styles.card}>
-            <h4 style={styles.stockOn}>{NewData[0].Stock}</h4>
-            <img src={NewData[0].img} alt='' />
-            <StarRating />
-            <p>{NewData[0].Description}</p>
-            <del> $ {NewData[0].OldPrice.toFixed(2)}</del>
-            <h2 style={styles.price}> $ {NewData[0].Price.toFixed(2)}</h2>
-          </Box>
-        </Container>
-        <Container>
-          <Box style={styles.card}>
-            <h4 style={styles.stockOff}>{NewData[1].Stock}</h4>
-            <img src={NewData[1].img} alt='' />
-            <StarRating />
-            <p>{NewData[1].Description}</p>
-            <del> $ {NewData[1].OldPrice.toFixed(2)}</del>
-            <h2 style={styles.price}> $ {NewData[1].Price.toFixed(2)}</h2>
-          </Box>
-        </Container>
-        <Container>
-          <Box style={styles.card}>
-            <h4 style={styles.stockOn}>{NewData[2].Stock}</h4>
-            <img src={NewData[2].img} alt='' />
-            <StarRating />
-            <p>{NewData[2].Description}</p>
-            <del> $ {NewData[2].OldPrice.toFixed(2)}</del>
-            <h2 style={styles.price}> $ {NewData[2].Price.toFixed(2)}</h2>
-          </Box>
-        </Container>
-        <Container>
-          <Box style={styles.card}>
-            <h4 style={styles.stockOn}>{NewData[3].Stock}</h4>
-            <img src={NewData[3].img} alt='' />
-            <StarRating />
-            <p>{NewData[3].Description}</p>
-            <del> $ {NewData[3].OldPrice.toFixed(2)}</del>
-            <h2 style={styles.price}> $ {NewData[3].Price.toFixed(3)}</h2>
-          </Box>
-        </Container>
-        <Container>
-          <Box style={styles.card}>
-            <h4 style={styles.stockOff}>{NewData[4].Stock}</h4>
-            <img src={NewData[4].img} alt='' />
-            <StarRating />
-            <p>{NewData[4].Description}</p>
-            <del> $ {NewData[4].OldPrice.toFixed(2)}</del>
-            <h2 style={styles.price}> $ {NewData[4].Price.toFixed(2)}</h2>
-          </Box>
-        </Container>
-        <Container>
-          <Box style={styles.card}>
-            <h4 style={styles.stockOn}>{NewData[5].Stock}</h4>
-            <img src={NewData[5].img} alt='' />
-            <StarRating />
-            <p>{NewData[5].Description}</p>
-            <del> $ {NewData[5].OldPrice.toFixed(2)}</del>
-            <h2 style={styles.price}> $ {NewData[5].Price.toFixed(2)}</h2>
-          </Box>
-        </Container>
-        <Container>
-          <Box style={styles.card}>
-            <h4 style={styles.stockOff}>{NewData[0].Stock}</h4>
-            <img src={NewData[0].img} alt='' />
-            <StarRating />
-            <p>{NewData[0].Description}</p>
-            <del> $ {NewData[0].OldPrice.toFixed(2)}</del>
-            <h2 style={styles.price}> $ {NewData[0].Price.toFixed(2)}</h2>
-          </Box>
-        </Container>
+        {NewData.map((data) => {
+          const { id, Stock, img, Reviews, Description, OldPrice, Price } = data
+
+          return (
+            <Container key={id}>
+              <Box style={styles.card}>
+                <h4 style={styles.stockOn}>{Stock}</h4>
+                <img src={img} alt='img-product' />
+                <StarRating />
+                <p>{Description}</p>
+                <del> $ {OldPrice.toFixed(2)}</del>
+                <h2 style={styles.price}> $ {Price.toFixed(2)}</h2>
+              </Box>
+            </Container>
+          )
+        })}
       </Slider>
     </>
   )
