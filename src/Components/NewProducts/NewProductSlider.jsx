@@ -6,7 +6,7 @@ export default function NewProduct() {
   return (
     <>
       <Center>
-        <Box breakpoint="(min-width: 800px)" w="95%" p={4} color="black">
+        <Box breakpoint="(min-width: 800px)" w="95%" p={4}>
           <NewProducts />
         </Box>
       </Center>

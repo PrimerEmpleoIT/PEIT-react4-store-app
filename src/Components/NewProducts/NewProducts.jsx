@@ -7,6 +7,7 @@ import { NewData } from "../../Helpers/NewData";
 import { useWindowWidth } from "@react-hook/window-size";
 import { Box, Container } from "@chakra-ui/react";
 import { FaBluetooth } from "react-icons/fa";
+import "./NewProducts.css";
 
 const styles = {
   card: {
@@ -48,6 +49,7 @@ export default function NewProducts() {
   }, [onlyWidth]);
 
   let settings = {
+    arrows: true,
     dots: false,
     infinite: true,
     speed: 500,
@@ -57,7 +59,7 @@ export default function NewProducts() {
   return (
     <>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <span style={{ fontSize: "22px", padding: "20px", fontWeight: "bold" }}>
+        <span style={{ fontSize: "22px", padding: "22px", fontWeight: "bold" }}>
           New Products
         </span>
         <u
@@ -137,7 +139,7 @@ export default function NewProducts() {
         </Container>
         <Container>
           <Box style={styles.card}>
-            <h4 style={styles.stockOff}>{NewData[0].Stock}</h4>
+            <h4 style={styles.stockOff}>{NewData[1].Stock}</h4>
             <img src={NewData[0].img} alt="" />
             <StarRating />
             <p>{NewData[0].Description}</p>
