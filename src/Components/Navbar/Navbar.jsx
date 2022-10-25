@@ -1,9 +1,11 @@
 import Logo from "@/assets/navBar/Logo.svg";
 import ProfilePhoto from "@/assets/navBar/ProfilePhoto.svg";
 import { links } from "@/Helpers/navBarLinks";
-import { Button, Flex, Hide, IconButton, Image, Link } from "@chakra-ui/react";
+import { Button, Flex, Hide, IconButton, Image } from "@chakra-ui/react";
 import { GrCart } from "react-icons/gr";
+import { BrowserRouter, NavLink } from "react-router-dom";
 import { NavBarMobileScreen } from "..";
+import pagesRoutes from "@/Helpers/pagesRoutes";
 
 function Navbar() {
   return (
@@ -18,15 +20,19 @@ function Navbar() {
           <Image src={Logo} h="30px" w="40px" />
           {links.map((link) => {
             return (
-              <Flex key={link.id}>
-                <Link
-                  fontSize={{ base: "12px", md: "12px", lg: "14px" }}
-                  fontWeight="600"
-                  fontFamily="Poppins"
-                >
-                  {link.title}
-                </Link>
-              </Flex>
+              <BrowserRouter>
+                <Flex key={link.id}>
+                  <NavLink
+                    exact
+                    to={pagesRoutes[link.id - 1]}
+                    fontSize={{ base: "12px", md: "12px", lg: "14px" }}
+                    fontWeight="600"
+                    fontFamily="Poppins"
+                  >
+                    {link.title}
+                  </NavLink>
+                </Flex>
+              </BrowserRouter>
             );
           })}
           <Flex>
@@ -57,4 +63,5 @@ function Navbar() {
     </>
   );
 }
+
 export default Navbar;
