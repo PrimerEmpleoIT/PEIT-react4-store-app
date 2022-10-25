@@ -8,10 +8,11 @@ function Testimonials() {
   return (
     <>
       <Box
+        maxW={{ base: '100%', lg: '1240px' }}
         bg={'divBg'}
-        mx={6}
+        mx={{ base: 6, xl: 'auto' }}
         pt={8}
-        pb={{ base: 1, xs: 4, md: 1 }}
+        pb={{ base: 6, xs: 8 }}
         borderTopRadius={'1rem'}
       >
         <Carousel
@@ -22,6 +23,7 @@ function Testimonials() {
           showStatus={false}
           showArrows={false}
           transitionTime={10}
+          showThumbs={false}
         >
           {testimonials.map((review) => {
             const { id, text, name } = review
@@ -29,9 +31,9 @@ function Testimonials() {
             return (
               <Stack
                 key={id}
-                py={{ base: 2, xs: 10 }}
+                py={{ base: 8 }}
                 mx={{ base: 10, md: 36, xl: 56 }}
-                spacing={4}
+                spacing={2}
                 fontFamily={'body'}
               >
                 <HStack spacing={6}>
@@ -56,6 +58,7 @@ function Testimonials() {
                   color={'black'}
                   fontWeight={'normal'}
                   fontSize={{ base: 'stock', md: 'general' }}
+                  mb={8}
                 >
                   {name}
                 </Text>

@@ -1,17 +1,22 @@
 import { followUs } from '@/Helpers'
-import { Flex, Hide, Image, SimpleGrid, Stack, Text } from '@chakra-ui/react'
+import {
+  Flex,
+  Heading,
+  Hide,
+  Image,
+  SimpleGrid,
+  Stack,
+  Text,
+} from '@chakra-ui/react'
 
 function FollowUs() {
   return (
     <Hide below='lg'>
-      <Stack>
-        <SimpleGrid
-          gap={1}
-          columns={6}
-          w='100%'
-          justifyItems='center'
-          paddingX={20} 
-        >
+      <Stack fontFamily={'body'} px={{ lg: 2, '2xl': 0 }}>
+        <Heading fontSize={'category'} fontWeight={'semibold'}>
+          Follow us on Instagram for News, Offers & More
+        </Heading>
+        <SimpleGrid gap={3} py={4} columns={6} w='100%' justifyItems='center'>
           {followUs.map((i) => {
             return (
               <Flex

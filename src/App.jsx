@@ -1,17 +1,16 @@
-import { store } from "@/Store";
-import { useEffect } from "react";
-import { Provider } from "react-redux";
+import { store } from '@/Store'
+import { Provider } from 'react-redux'
 import {
   Ads,
   Banner,
+  Benefits,
   FollowUs,
   Layout,
   NewProductSlider,
   Sponsors,
   Testimonials,
-  Benefits,
-} from "./Components";
-import ProyectRoutes from "./ProyectRoutes";
+} from './Components'
+import { ProyectRoutes } from './Routes'
 
 function App() {
   return (
@@ -29,7 +28,7 @@ function App() {
         </Layout>
       </Provider>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
