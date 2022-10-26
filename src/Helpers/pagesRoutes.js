@@ -3,7 +3,7 @@ const pagesRoutes = [
   "/desktopPC",
   "/networkingdevices",
   "/printer&scanners",
-  "pcparts",
+  "/pcparts",
   "/allotherproducts",
   "/repairs",
   "/ourdeals",
