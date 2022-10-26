@@ -1,35 +1,34 @@
-<<<<<<< HEAD
-import NewProducts from "./Components/Layout/NewProducts/NewProducts";
-import Banner from "./Components/Banner/Banner";
-import Sponsors from "./Components/Sponsors/Sponsors";
-import Banner from "./Components/Banner/Banner";
-import { Layout } from "./Components";
-=======
+import { store } from '@/Store'
+import { Provider } from 'react-redux'
 import {
   Ads,
   Banner,
+  Benefits,
   FollowUs,
   Layout,
   NewProductSlider,
   Sponsors,
   Testimonials,
-  Benefits,
-} from "./Components";
+} from './Components'
+import { ProyectRoutes } from './Routes'
 
 function App() {
   return (
     <>
-      <Layout>
-        <Banner />
-        <NewProductSlider />
-        <Ads />
-        <Sponsors />
-        <FollowUs />
-        <Testimonials />
-        <Benefits />
-      </Layout>
+      <ProyectRoutes />
+      <Provider store={store}>
+        <Layout>
+          <Banner />
+          <NewProductSlider />
+          <Ads />
+          <Sponsors />
+          <FollowUs />
+          <Testimonials />
+          <Benefits />
+        </Layout>
+      </Provider>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
