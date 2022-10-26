@@ -2,14 +2,16 @@ import { store } from '@/Store'
 import { Provider } from 'react-redux'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Layout } from './Components'
-import AllOtherProducts from './Pages/AllOtherProducts'
-import DesktopPC from './Pages/DesktopPC'
-import HomeRoute from './Pages/HomeRoute'
-import Laptops from './Pages/Laptops'
-import NetworkingDevices from './Pages/NetworkingDevices'
-import PcParts from './Pages/PcParts'
-import PrinterScanners from './Pages/PrinterScanners'
-import Repairs from './Pages/Repairs'
+import {
+  AllOtherProducts,
+  DesktopPC,
+  HomeRoute,
+  Laptops,
+  NetworkingDevices,
+  PcParts,
+  PrinterScanners,
+  Repairs,
+} from './Pages'
 
 function App() {
   return (

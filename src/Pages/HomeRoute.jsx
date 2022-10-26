@@ -6,7 +6,7 @@ import {
   NewProductSlider,
   Sponsors,
   Testimonials,
-} from "../Components";
+} from '@/Components'
 
 export default function HomeRoute() {
   return (
@@ -19,5 +19,5 @@ export default function HomeRoute() {
       <Testimonials />
       <FollowUs />
     </>
-  );
+  )
 }

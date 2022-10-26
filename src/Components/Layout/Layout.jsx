@@ -2,7 +2,7 @@ import { Box } from '@chakra-ui/react'
 import { Outlet } from 'react-router-dom'
 import { Benefits, Footer, Header, Navbar } from '..'
 
-function Layout({ children }) {
+function Layout() {
   return (
     <>
       <Header />
