@@ -1,12 +1,12 @@
 const pagesRoutes = [
-  "/Laptops",
-  "/DesktopPC",
-  "/NetworkinDevices",
-  "/Printer&Scanners",
-  "/PcParts",
-  "/AllOther Products",
-  "/Repairs",
-  "/OurDeals",
+  "/laptops",
+  "/desktopPC",
+  "/networkingdevices",
+  "/printer&scanners",
+  "/pcparts",
+  "/allotherproducts",
+  "/repairs",
+  "/ourdeals",
 ];
 
 export default pagesRoutes;
