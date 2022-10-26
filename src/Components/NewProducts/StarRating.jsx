@@ -1,70 +1,67 @@
-import { useState } from "react";
-import { FaStar } from "react-icons/fa";
+import { Box, Container, Flex, IconButton } from '@chakra-ui/react'
+import { useState } from 'react'
+import { FaStar } from 'react-icons/fa'
 
 const colors = {
-  orange: "#FFBA5A",
-  grey: "#a9a9a9",
-};
+  orange: '#FFBA5A',
+  grey: '#a9a9a9',
+}
 
 function StarRating() {
-  const [currentValue, setCurrentValue] = useState(0);
-  const [hoverValue, setHoverValue] = useState(undefined);
-  const stars = Array(5).fill(0);
+  const [currentValue, setCurrentValue] = useState(0)
+  const [hoverValue, setHoverValue] = useState(undefined)
+  const stars = Array(5).fill(0)
 
   const handleClick = (value) => {
-    setCurrentValue(value);
-  };
+    setCurrentValue(value)
+  }
 
   const handleMouseOver = (newHoverValue) => {
-    setHoverValue(newHoverValue);
-  };
+    setHoverValue(newHoverValue)
+  }
 
   const handleMouseLeave = () => {
-    setHoverValue(undefined);
-  };
+    setHoverValue(undefined)
+  }
 
   return (
-    <div style={styles.container}>
-      <div style={styles.stars}>
+    <Container
+      display={'flex'}
+      alignItems='center'
+      pt={2.5}
+      pr='5px'
+      pb={2}
+      pl={0}
+    >
+      <Flex align={'center'}>
         {stars.map((_, index) => {
           return (
-            <FaStar
+            <IconButton
+              icon={<FaStar />}
               key={index}
+              fontSize={{ base: 'small', sm: 'review', md: 'description' }}
               size={12}
               onClick={() => handleClick(index + 1)}
               onMouseOver={() => handleMouseOver(index + 1)}
               onMouseLeave={handleMouseLeave}
-              color={
-                (hoverValue || currentValue) > index
-                  ? colors.orange
-                  : colors.grey
-              }
-              style={{
-                marginRight: 2,
-                cursor: "pointer",
-              }}
-            />
-          );
+              cursor='pointer'
+              color={`${
+                (hoverValue || currentValue) > index ? 'star' : 'empty'
+              }`}
+            ></IconButton>
+          )
         })}
-      </div>
-      <div style={{ fontSize: "11px", marginLeft: "10px", color: "#ccc" }}>
-        Reviews ( {currentValue} )
-      </div>
-    </div>
-  );
+        <Box
+          fontSize={{ base: 'stock', sm: 'reviews', md: 'description' }}
+          fontWeight={'normal'}
+          ml={{ base: '8px', md: '10px' }}
+          color='gray'
+        >
+          Reviews ({currentValue})
+        </Box>
+      </Flex>
+    </Container>
+  )
 }
 
-const styles = {
-  container: {
-    display: "flex",
-
-    alignItems: "center",
-    padding: "10px 5px 8px 0px",
-  },
-  stars: {
-    display: "flex",
-    flexDirection: "row",
-  },
-};
-
-export default StarRating;
+export default StarRating

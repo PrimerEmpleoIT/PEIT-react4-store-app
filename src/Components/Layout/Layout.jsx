@@ -1,17 +1,18 @@
-import { Box } from "@chakra-ui/react";
-import { Footer, Header, Navbar } from "..";
-import { Outlet } from "react-router-dom";
+import { Box } from '@chakra-ui/react'
+import { Outlet } from 'react-router-dom'
+import { Benefits, Footer, Header, Navbar } from '..'
 
-function Layout({ children }) {
+function Layout() {
   return (
     <>
       <Header />
       <Navbar />
-      <Box maxW={"1440px"} mx={"auto"}>
+      <Box maxW={'1440px'} mx={'auto'}>
         <Outlet />
       </Box>
+      <Benefits />
       <Footer />
     </>
-  );
+  )
 }
-export default Layout;
+export default Layout

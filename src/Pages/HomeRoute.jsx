@@ -1,12 +1,11 @@
 import {
   Ads,
   Banner,
-  Benefits,
   FollowUs,
   NewProductSlider,
   Sponsors,
   Testimonials,
-} from "../Components";
+} from '@/Components'
 
 export default function HomeRoute() {
   return (
@@ -14,10 +13,9 @@ export default function HomeRoute() {
       <Banner />
       <NewProductSlider />
       <Ads />
-      <Benefits />
       <Sponsors />
-      <Testimonials />
       <FollowUs />
+      <Testimonials />
     </>
-  );
+  )
 }
