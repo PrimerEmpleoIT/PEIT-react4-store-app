@@ -1,6 +1,6 @@
 import Logo from '@/assets/navBar/Logo.svg'
 import ProfilePhoto from '@/assets/navBar/ProfilePhoto.svg'
-import { links } from '@/Helpers/navBarLinks'
+import { links, pagesRoutes } from '@/Helpers'
 import {
   Box,
   Button,
@@ -12,6 +12,7 @@ import {
   Link,
 } from '@chakra-ui/react'
 import { GrCart } from 'react-icons/gr'
+import { NavLink } from 'react-router-dom'
 import NavBarMobileScreen from './NavBarMobileScreen'
 
 function Navbar() {
@@ -29,22 +30,28 @@ function Navbar() {
           pr={2}
         >
           <HStack spacing={{ md: 4, lg: 12 }} pl={{ md: 2, lg: 6 }}>
-            <Image src={Logo} h='30px' w='40px' alt='' />
+            <Link as={NavLink} to={'/'}>
+              <Image src={Logo} h='30px' w='40px' alt='' />
+            </Link>
             <Flex gap={{ md: 3, lg: 6, xl: 8 }}>
               {links.map((link) => {
+                const { id, title } = link
+
                 return (
-                  <HStack key={link.id}>
+                  <HStack key={id}>
                     <Link
+                      as={NavLink}
+                      to={pagesRoutes[id - 1]}
                       fontSize={{
                         base: 'small',
                         lg: 'description',
                         xl: 'general',
                       }}
-                      fontWeight='600'
+                      fontWeight='semibold'
                       display={'flex'}
                       align={'center'}
                     >
-                      {link.title}
+                      {title}
                     </Link>
                   </HStack>
                 )

@@ -17,25 +17,35 @@ function FollowUs() {
           Follow us on Instagram for News, Offers & More
         </Heading>
         <SimpleGrid gap={3} py={4} columns={6} w='100%' justifyItems='center'>
-          {followUs.map((i) => {
+          {followUs.map((follow) => {
+            const { id, description, img, date } = follow
+
             return (
               <Flex
                 direction='column'
-                key={i.id}
+                key={id}
                 maxW='235px'
                 maxH='322px'
                 mb={3}
               >
-                <Image src={i.img} w='235px' h='152px' alt='notebook' />
+                <Image src={img} w='235px' h='152px' alt='notebook' />
                 <Text
                   mt={1}
                   textAlign='center'
-                  fontFamily='Poppins'
-                  fontSize='12px'
+                  fontSize='review'
                   fontWeight='medium'
                 >
                   {' '}
-                  {i.description}
+                  {description}
+                </Text>
+                <Text
+                  mt={2}
+                  fontWeight={'normal'}
+                  fontSize={'stock'}
+                  color={'gray'}
+                  textAlign={'center'}
+                >
+                  {date}
                 </Text>
               </Flex>
             )
