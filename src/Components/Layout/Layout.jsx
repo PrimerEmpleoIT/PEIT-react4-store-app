@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/react'
-import { Footer, Header, Navbar } from '..'
+import { Benefits, Footer, Header, Navbar } from '..'
 
 function Layout({ children }) {
   return (
@@ -9,6 +9,7 @@ function Layout({ children }) {
       <Box maxW={'1440px'} mx={'auto'}>
         {children}
       </Box>
+      <Benefits />
       <Footer />
     </>
   )

@@ -3,7 +3,6 @@ import { Provider } from 'react-redux'
 import {
   Ads,
   Banner,
-  Benefits,
   FollowUs,
   Layout,
   NewProductSlider,
@@ -24,7 +23,6 @@ function App() {
           <Sponsors />
           <FollowUs />
           <Testimonials />
-          <Benefits />
         </Layout>
       </Provider>
     </>
