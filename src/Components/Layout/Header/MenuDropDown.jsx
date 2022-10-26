@@ -1,8 +1,11 @@
 import Clock from '@/assets/Header/bx_bx-time.svg'
 import Location from '@/assets/Header/location.svg'
 import {
+  Box,
   Button,
+  Divider,
   Flex,
+  Highlight,
   Image,
   MenuButton,
   MenuGroup,
@@ -13,45 +16,55 @@ import { FaChevronDown } from 'react-icons/fa'
 
 function MenuDropDown() {
   return (
-    <Flex>
+    <Box fontFamily={'body'} py={2}>
       <MenuButton
+        border={{ base: '1px solid gray', md: 'none' }}
+        borderRadius='1rem'
         as={Button}
-        rightIcon={<FaChevronDown />}
-        color='grey'
-        fontSize={['10px', '10px', '12px']}
-        fontWeight='800'
-        fontFamily='Poppins'
+        rightIcon={<FaChevronDown color='white' />}
+        color='gray'
+        fontSize={['small', 'small', 'review']}
+        fontWeight='extrabold'
+        transition='all 0.5s'
       >
-        Mon-Thru: <span className='header_OpenToClose'>9:00 AM - 5:30 PM</span>
-        <MenuList>
+        <Flex align={'center'} gap={2}>
+          Mon-Thu: <Text color={'white'}>9:00 AM - 5:30 PM</Text>
+        </Flex>
+        <MenuList
+          minWidth={'320px'}
+          display='flex'
+          flexDir={'column'}
+          justifyContent='center'
+          alignItems={'center'}
+        >
           <MenuGroup>
-            <Flex
-              alignItems='start'
-              justify='start'
-              paddingX={2}
-              gap={1}
-              borderBottom='1px solid gray'
-            >
-              <Image src={Clock} h='35px' w='35px' />
-              <Flex direction='column' mt={1} gap={2} fontWeight='normal'>
-                <Text textAlign='start' fontSize='12px' fontFamily='Poppins'>
+            <Flex alignItems='flex-start' justify='flex-start' gap={4}>
+              <Image src={Clock} h='35px' w='35px' alt='' />
+              <Flex
+                py={1}
+                direction='column'
+                mt={1}
+                gap={2}
+                fontWeight='normal'
+              >
+                <Text textAlign='left' fontSize='review' color={'black'}>
                   We Are Open
                 </Text>
-                <Text textAlign='start' fontWeight='semibold' fontSize='12px'>
+                <Text textAlign='left' fontWeight='semibold' fontSize='review'>
                   Mon-Thu:
                   <Text as='span' color='black'>
                     {' '}
                     9:00 AM - 5:30 PM
                   </Text>
                 </Text>
-                <Text textAlign='start' fontWeight='semibold'>
+                <Text textAlign='left' fontWeight='semibold'>
                   Fr:
                   <Text as='span' color='black'>
                     {' '}
                     9:00 AM - 6:00 PM
                   </Text>
                 </Text>
-                <Text textAlign='start' fontWeight='semibold'>
+                <Text textAlign='left' fontWeight='semibold'>
                   Sat:
                   <Text as='span' color='black'>
                     {' '}
@@ -60,68 +73,57 @@ function MenuDropDown() {
                 </Text>
               </Flex>
             </Flex>
+            <Divider color={'empty'} w={'100%'} mt={1} />
           </MenuGroup>
           <MenuGroup>
-            <Flex
-              paddingY={1}
-              paddingX={2}
-              gap={1}
-              align='center'
-              borderBottom='1px solid gray'
-            >
-              <Image src={Location} w={'35px'} h={'35px'} />
-              <Flex direction='column'>
-                <Text
-                  fontSize='13px'
-                  fontWeight='semibold'
-                  fontFamily='Poppins'
-                  color='black'
-                >
+            <Flex paddingY={1} gap={4} align='center' justify='flex-start'>
+              <Image src={Location} w={'35px'} h={'35px'} alt='' />
+              <Flex direction='column' fontWeight='normal' mt={1}>
+                <Text fontSize='description' color='black'>
                   Address: 1234 Street Adress,
                 </Text>
-                <Text
-                  textAlign='start'
-                  fontSize='13px'
-                  fontWeight='semibold'
-                  fontFamily='Poppins'
-                  color='black'
-                >
+                <Text textAlign='left' fontSize='decription' color='black'>
                   City Address, 1234
                 </Text>
               </Flex>
             </Flex>
+            <Divider color={'empty'} w={'100%'} mt={1} />
           </MenuGroup>
           <MenuGroup>
-            <Flex direction='column' paddingY={1} paddingX={5}>
+            <Flex direction='column' paddingY={1} paddingX={5} mt={2}>
               <Text
-                textAlign='start'
-                fontSize='13px'
-                fontWeight='normal'
-                fontFamily='Poppins'
+                textAlign='left'
+                fontSize='description'
+                fontWeight='regular'
                 color='black'
               >
                 Phones:{' '}
-                <Text as='span' color='blue'>
+                <Highlight
+                  query={'(00) 1234 5678'}
+                  styles={{ color: 'contact', fontWeight: 'normal' }}
+                >
                   (00) 1234 5678
-                </Text>
+                </Highlight>
               </Text>
               <Text
-                textAlign='start'
-                fontSize='13px'
+                textAlign='left'
+                fontSize='description'
                 fontWeight='normal'
                 color='black'
-                fontFamily='Poppins'
               >
                 E-mail:{' '}
-                <Text as='span' color='blue'>
+                <Highlight
+                  query={'shop@email.com'}
+                  styles={{ color: 'contact', fontWeight: 'normal' }}
+                >
                   shop@email.com
-                </Text>
+                </Highlight>
               </Text>
             </Flex>
           </MenuGroup>
         </MenuList>
       </MenuButton>
-    </Flex>
+    </Box>
   )
 }
 
