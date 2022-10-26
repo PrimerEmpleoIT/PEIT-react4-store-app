@@ -30,7 +30,7 @@ function NavBarMobileScreen() {
         justify={{ base: 'center', xs: 'space-between' }}
         alignItems='center'
         paddingY={2}
-        gap={2}
+        w={'100vw'}
       >
         <Button
           as={IconButton}
@@ -55,7 +55,6 @@ function NavBarMobileScreen() {
         <HStack>
           <IconButton
             aria-label='Cart'
-            size='lg'
             icon={<GrCart fontSize={24} />}
             fontSize='large'
             color='transparent'
