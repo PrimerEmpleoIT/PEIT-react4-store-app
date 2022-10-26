@@ -1,7 +1,6 @@
 export { default as Ads } from './Ads/Ads'
 export { default as Banner } from './Banner/Banner'
 export { default as ImageSlider } from './Banner/ImageSlider'
-export * from './Banner/SlideData'
 export { default as FollowUs } from './FollowUs/FollowUs'
 export { default as Benefits } from './Layout/Benefits/Benefits'
 export { default as AccordionFooter } from './Layout/Footer/AccordionFooter'
