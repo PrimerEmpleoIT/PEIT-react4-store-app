@@ -9,7 +9,7 @@ export const links = [
   },
   {
     id: 3,
-    title: 'Networkin Devices',
+    title: 'Networking Devices',
   },
   {
     id: 4,
@@ -17,11 +17,11 @@ export const links = [
   },
   {
     id: 5,
-    title: 'Pc Parts',
+    title: 'PC Parts',
   },
   {
     id: 6,
-    title: 'All Other Producs',
+    title: 'All Other Products',
   },
   {
     id: 7,
