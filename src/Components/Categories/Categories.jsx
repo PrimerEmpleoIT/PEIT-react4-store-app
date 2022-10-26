@@ -17,7 +17,11 @@ function Categories() {
       {loading ? (
         <div>cargando...</div>
       ) : (
-        data.map((info) => <Categorie {...info} key={info.id} />)
+        data.map((info) => (
+          <Stack mb={5}>
+            <Categorie {...info} key={info.id} />
+          </Stack>
+        ))
       )}
     </>
   );
