@@ -1,5 +1,5 @@
-import { store } from '@/Store'
-import { Provider } from 'react-redux'
+import { store } from "@/Store";
+import { Provider } from "react-redux";
 import {
   Ads,
   Banner,
@@ -9,8 +9,9 @@ import {
   NewProductSlider,
   Sponsors,
   Testimonials,
-} from './Components'
-import { ProyectRoutes } from './Routes'
+  Categories,
+} from "./Components";
+import { ProyectRoutes } from "./Routes";
 
 function App() {
   return (
@@ -22,13 +23,14 @@ function App() {
           <NewProductSlider />
           <Ads />
           <Sponsors />
+          <Categories />
           <FollowUs />
           <Testimonials />
           <Benefits />
         </Layout>
       </Provider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

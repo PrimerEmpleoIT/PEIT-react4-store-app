@@ -1,12 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const products = createSlice({
-  name: "Products", // nombre del estado que se va crear
+  name: "products", // nombre del estado que se va crear
   initialState: {
     // el estado con el cual se va inicializar
-
     loading: true,
-    data: {},
+    data: [],
     error: null,
   },
 

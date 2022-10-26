@@ -181,21 +181,6 @@ export const storeProducts = [
         categories: 3,
       },
       {
-        id: 1,
-        title:
-          "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
-        description:
-          "Windows 10 Home - MSI recommends Windows 11 Pro for business  FREE Upgrade to Windows 11 23.8 IPS Grade Panel LED Backlight (1920*1080 FHD)",
-        details:
-          "Featured MSI Super Charger technology that supports fast USB Sleep-and-Charge with auto-detection 178° wide viewing angle screen          ",
-        specs: null,
-        price: "33443221.00",
-        images:
-          "https://front.dev.malditohard.com.ar/img/migration/GABINETE-GAMER-RAIDMAX-X616TBF.webp",
-        created_at: "2022-10-19T00:48:15.729856Z",
-        categories: 3,
-      },
-      {
         id: 2,
         title:
           "EX DISPLAY : MSI Pro 16 Flex-036AU 15.6 MULTITOUCH All-In-On...",
