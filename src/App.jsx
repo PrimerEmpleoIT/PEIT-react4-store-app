@@ -3,12 +3,12 @@ import { Provider } from "react-redux";
 import {
   Ads,
   Banner,
+  Benefits,
   FollowUs,
   Layout,
   NewProductSlider,
   Sponsors,
   Testimonials,
-  Benefits,
 } from "./Components";
 
 function App() {
