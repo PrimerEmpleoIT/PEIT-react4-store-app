@@ -1,11 +1,11 @@
 import { NewData } from '@/Helpers'
-import { Box, Container, Flex, Heading, Image, Text } from '@chakra-ui/react'
+import { ProductCard } from '@/Utils'
+import { Flex, Text } from '@chakra-ui/react'
 import { useWindowWidth } from '@react-hook/window-size'
 import { useEffect, useState } from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
-import { StarRating } from '..'
 import './NewProducts.css'
 
 export default function NewProducts() {
@@ -54,67 +54,19 @@ export default function NewProducts() {
 
       <Slider {...settings}>
         {NewData.map((data) => {
-          const {
-            id,
-            Stock,
-            img,
-            Reviews,
-            icon,
-            Description,
-            OldPrice,
-            Price,
-          } = data
+          const { id, stock, img, icon, description, oldPrice, price } = data
 
           return (
-            <Container key={id}>
-              <Box
-                fontSize={'general'}
-                bg='white'
-                borderRadius={'3px'}
-                cursor='pointer'
-                m={0}
-                p={0}
-              >
-                {Stock === 'check availability' ? (
-                  <Flex gap={1}>
-                    <Image w={3} src={icon} alt='unavailable' />
-                    <Heading
-                      as={'h4'}
-                      color={'unavailable'}
-                      fontWeight={'normal'}
-                      fontSize={'stock'}
-                    >
-                      {Stock}
-                    </Heading>
-                  </Flex>
-                ) : (
-                  <Flex gap={1}>
-                    <Image w={3} src={icon} alt='available' />
-                    <Heading
-                      as={'h4'}
-                      color={'available'}
-                      fontWeight={'normal'}
-                      fontSize={'stock'}
-                    >
-                      {Stock}
-                    </Heading>
-                  </Flex>
-                )}
-                <Image src={img} alt='img-product' />
-                <StarRating />
-                <Text
-                  fontWeight={'normal'}
-                  fontSize={{ base: 'small', md: 'description' }}
-                >
-                  {Description}
-                </Text>
-                <del> $ {OldPrice.toFixed(2)}</del>
-                <Heading as={'h2'} fontSize={'paragraph'} fontWeight={'bold'}>
-                  {' '}
-                  $ {Price.toFixed(2)}
-                </Heading>
-              </Box>
-            </Container>
+            <ProductCard
+              key={id}
+              id={id}
+              stock={stock}
+              img={img}
+              icon={icon}
+              description={description}
+              oldPrice={oldPrice}
+              price={price}
+            />
           )
         })}
       </Slider>
