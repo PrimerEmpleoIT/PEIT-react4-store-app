@@ -1,7 +1,7 @@
-import { store } from '@/Store'
-import { Provider } from 'react-redux'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Layout } from './Components'
+import { store } from "@/Store";
+import { Provider } from "react-redux";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Layout } from "./Components";
 import {
   AllOtherProducts,
   DesktopPC,
@@ -11,7 +11,7 @@ import {
   PcParts,
   PrinterScanners,
   Repairs,
-} from './Pages'
+} from "./Pages";
 
 function App() {
   return (
@@ -19,21 +19,21 @@ function App() {
       <Provider store={store}>
         <BrowserRouter>
           <Routes>
-            <Route path='' element={<Layout />}>
-              <Route path='/' element={<HomeRoute />} />
-              <Route path='/laptops' element={<Laptops />} />
-              <Route path='desktopPC' element={<DesktopPC />} />
-              <Route path='networkingDevices' element={<NetworkingDevices />} />
-              <Route path='/printer&scanners' element={<PrinterScanners />} />
-              <Route path='/pcParts' element={<PcParts />} />
-              <Route path='/allotherproducts' element={<AllOtherProducts />} />
-              <Route path='/repairs' element={<Repairs />} />
+            <Route path="" element={<Layout />}>
+              <Route path="/" element={<HomeRoute />} />
+              <Route path="/laptops" element={<Laptops />} />
+              <Route path="desktopPC" element={<DesktopPC />} />
+              <Route path="networkingDevices" element={<NetworkingDevices />} />
+              <Route path="/printer&scanners" element={<PrinterScanners />} />
+              <Route path="/pcParts" element={<PcParts />} />
+              <Route path="/allotherproducts" element={<AllOtherProducts />} />
+              <Route path="/repairs" element={<Repairs />} />
             </Route>
           </Routes>
         </BrowserRouter>
       </Provider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

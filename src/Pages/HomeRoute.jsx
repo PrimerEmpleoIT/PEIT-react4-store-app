@@ -5,7 +5,8 @@ import {
   NewProductSlider,
   Sponsors,
   Testimonials,
-} from '@/Components'
+  Categories,
+} from "@/Components";
 
 export default function HomeRoute() {
   return (
@@ -14,8 +15,9 @@ export default function HomeRoute() {
       <NewProductSlider />
       <Ads />
       <Sponsors />
+      <Categories />
       <FollowUs />
       <Testimonials />
     </>
-  )
+  );
 }
