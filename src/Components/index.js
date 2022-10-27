@@ -15,3 +15,4 @@ export { default as NewProductSlider } from "./NewProducts/NewProductSlider";
 export { default as StarRating } from "./NewProducts/StarRating";
 export { default as Sponsors } from "./Sponsors/Sponsors";
 export { default as Testimonials } from "./Testimonials/Testimonials";
+export { default as Categories } from "./Categories/Categories";

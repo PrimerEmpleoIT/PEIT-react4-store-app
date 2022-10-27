@@ -1,7 +1,14 @@
 import { Button, Flex, Image, Text } from "@chakra-ui/react";
+import { useState } from "react";
 function Categorie(info) {
   const { name, products, id } = info;
-  console.log(products);
+  const [filter, setFilter] = useState(products);
+  const handleFilter = (e) => {
+    const buttonValue = e.target.innerText;
+    const filter = products.filter((p) => p.specs === buttonValue);
+    setFilter(filter);
+  };
+
   return (
     <Flex justify="center" gap={3}>
       <Flex direction="column" justify="center">
@@ -11,14 +18,16 @@ function Categorie(info) {
       <Flex direction="column">
         <Flex direction="row">
           {products.map((p) => (
-            <Button>{p.specs}</Button>
+            <Button onClick={(e) => handleFilter(e)} key={p.id}>
+              {p.specs}
+            </Button>
           ))}
         </Flex>
 
         {/* products cards */}
 
         <Flex>
-          {products.map((p) => (
+          {filter.map((p) => (
             <Flex direction="column" maxW="235px" key={p.id}>
               <Image src={p.images} />
               <Text>{p.title}</Text>
