@@ -1,5 +1,5 @@
-import { StarRating } from '@/Components'
 import { Box, Container, Flex, Heading, Image, Text } from '@chakra-ui/react'
+import { StarRating } from '.'
 
 function ProductCard({ id, stock, img, icon, description, oldPrice, price }) {
   return (
