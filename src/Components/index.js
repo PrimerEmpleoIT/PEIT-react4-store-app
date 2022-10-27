@@ -12,7 +12,6 @@ export { default as Navbar } from "./Layout/Navbar/Navbar";
 export { default as NavBarMobileScreen } from "./Layout/Navbar/NavBarMobileScreen";
 export { default as NewProducts } from "./NewProducts/NewProducts";
 export { default as NewProductSlider } from "./NewProducts/NewProductSlider";
-export { default as StarRating } from "./NewProducts/StarRating";
 export { default as Sponsors } from "./Sponsors/Sponsors";
 export { default as Testimonials } from "./Testimonials/Testimonials";
 export { default as Categories } from "./Categories/Categories";
