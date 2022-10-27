@@ -1,4 +1,4 @@
-import { Image } from '@chakra-ui/react'
+import { Box, Image } from '@chakra-ui/react'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
@@ -13,12 +13,16 @@ const ImageSlider = ({ slides }) => {
       showThumbs={false}
     >
       {slides.map((slide) => {
+        const { id, image } = slide
+
         return (
-          <Image
-            src={slide.image}
-            h={{ base: '20vh', lg: 'auto' }}
-            alt='banner-img'
-          />
+          <Box key={id}>
+            <Image
+              src={image}
+              h={{ base: '20vh', lg: 'auto' }}
+              alt='banner-img'
+            />
+          </Box>
         )
       })}
     </Carousel>

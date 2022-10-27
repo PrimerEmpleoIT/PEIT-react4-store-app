@@ -1,9 +1,8 @@
 export { default as Ads } from "./Ads/Ads";
 export { default as Banner } from "./Banner/Banner";
 export { default as ImageSlider } from "./Banner/ImageSlider";
-export * from "./Banner/SlideData";
-export { default as Benefits } from "./Benefits/Benefits";
 export { default as FollowUs } from "./FollowUs/FollowUs";
+export { default as Benefits } from "./Layout/Benefits/Benefits";
 export { default as AccordionFooter } from "./Layout/Footer/AccordionFooter";
 export { default as Footer } from "./Layout/Footer/Footer";
 export { default as Header } from "./Layout/Header/Header";
@@ -16,4 +15,3 @@ export { default as NewProductSlider } from "./NewProducts/NewProductSlider";
 export { default as StarRating } from "./NewProducts/StarRating";
 export { default as Sponsors } from "./Sponsors/Sponsors";
 export { default as Testimonials } from "./Testimonials/Testimonials";
-export { default as Categories } from "./Categories/Categories";

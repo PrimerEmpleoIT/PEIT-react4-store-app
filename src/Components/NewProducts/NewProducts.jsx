@@ -32,17 +32,17 @@ export default function NewProducts() {
 
   return (
     <>
-      <Box
-        fontFamily={'body'}
-        display={'flex'}
-        justifyContent={'space-between'}
-      >
-        <Text style={{ fontSize: '22px', padding: '22px', fontWeight: 'bold' }}>
+      <Flex fontFamily={'body'} justifyContent={'space-between'}>
+        <Text
+          fontSize={{ base: 'paragraph', lg: 'category' }}
+          padding='22px'
+          fontWeight='semibold'
+        >
           New Products
         </Text>
         <Text
           marginTop='30px'
-          fontSize='review'
+          fontSize={{ base: 'stock', lg: 'description' }}
           textAlign='right'
           color='logo'
           textDecorationLine='underline'
@@ -50,7 +50,7 @@ export default function NewProducts() {
         >
           see all new products
         </Text>
-      </Box>
+      </Flex>
 
       <Slider {...settings}>
         {NewData.map((data) => {
@@ -77,7 +77,7 @@ export default function NewProducts() {
               >
                 {Stock === 'check availability' ? (
                   <Flex gap={1}>
-                    <Image w={3} src={icon} alt='unaavailable' />
+                    <Image w={3} src={icon} alt='unavailable' />
                     <Heading
                       as={'h4'}
                       color={'unavailable'}

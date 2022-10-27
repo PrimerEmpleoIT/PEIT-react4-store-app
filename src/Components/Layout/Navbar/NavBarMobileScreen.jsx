@@ -1,6 +1,6 @@
 import Logo from '@/assets/navBar/Logo.svg'
 import ProfilePhoto from '@/assets/navBar/ProfilePhoto.svg'
-import { links } from '@/Helpers/navBarLinks'
+import { links, pagesRoutes } from '@/Helpers'
 import {
   Box,
   Button,
@@ -15,11 +15,12 @@ import {
   HStack,
   IconButton,
   Image,
-  Text,
+  Link,
   useDisclosure,
 } from '@chakra-ui/react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { GrCart, GrFormNext } from 'react-icons/gr'
+import { NavLink } from 'react-router-dom'
 
 function NavBarMobileScreen() {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -73,18 +74,27 @@ function NavBarMobileScreen() {
             <DrawerCloseButton fontSize={'review'} mt='10px' />
 
             <DrawerHeader>
-              {' '}
-              <Image src={Logo} alt='' h='30px' w='40px' mr={'120px'} />
+              <Link as={NavLink} to={'/'}>
+                <Image src={Logo} alt='' h='30px' w='40px' mr={'120px'} />
+              </Link>
             </DrawerHeader>
             <Divider color={'empty'} w={'90%'} mx={4} />
           </Flex>
           <DrawerBody>
             {links.map((link) => {
+              const { id, title } = link
+
               return (
-                <Flex justify='space-between' mt={4} key={link.id}>
-                  <Text fontSize={'description'} fontWeight={'normal'} mb={2}>
-                    {link.title}
-                  </Text>
+                <Flex justify='space-between' mt={4} key={id}>
+                  <Link
+                    as={NavLink}
+                    to={pagesRoutes[id - 1]}
+                    fontSize={'description'}
+                    fontWeight={'normal'}
+                    mb={2}
+                  >
+                    {title}
+                  </Link>
                   <GrFormNext />
                 </Flex>
               )
