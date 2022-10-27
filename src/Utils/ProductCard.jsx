@@ -3,7 +3,7 @@ import { StarRating } from '.'
 
 function ProductCard({ id, stock, img, icon, description, oldPrice, price }) {
   return (
-    <Container key={id}>
+    <Box key={id} fontFamily={'body'}>
       <Box
         fontSize={'general'}
         bg='white'
@@ -37,7 +37,7 @@ function ProductCard({ id, stock, img, icon, description, oldPrice, price }) {
             </Heading>
           </Flex>
         )}
-        <Image src={img} alt='img-product' />
+        <Image src={img} alt='img-product' w={48} />
         <StarRating />
         <Text
           fontWeight={'normal'}
@@ -51,7 +51,7 @@ function ProductCard({ id, stock, img, icon, description, oldPrice, price }) {
           $ {price.toFixed(2)}
         </Heading>
       </Box>
-    </Container>
+    </Box>
   )
 }
 export default ProductCard
