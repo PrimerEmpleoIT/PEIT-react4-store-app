@@ -29,6 +29,13 @@ function Category(info) {
         columns={{ base: 3, sm: 4, md: 6 }}
         justifyItems={'self-start'}
       >
+        <Button
+          fontSize={{ base: 'description', sm: 'general', md: 'normal' }}
+          fontWeight={'semibold'}
+          onClick={() => setFilter(products)}
+        >
+          Most Popular
+        </Button>
         {products.map(p => (
           <Button
             fontSize={{ base: 'description', sm: 'general', md: 'normal' }}
@@ -39,13 +46,6 @@ function Category(info) {
             {p.specs}
           </Button>
         ))}
-        <Button
-          fontSize={{ base: 'description', sm: 'general', md: 'normal' }}
-          fontWeight={'semibold'}
-          onClick={e => setFilter(products)}
-        >
-          Most Popular
-        </Button>
       </SimpleGrid>
 
       <HStack h={'350px'} spacing={{ lg: 2, '2xl': 16 }}>
