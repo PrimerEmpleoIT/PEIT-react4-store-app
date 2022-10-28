@@ -9,6 +9,7 @@ import 'slick-carousel/slick/slick.css'
 function CategoryCarousel(info) {
   const { name, products, id, bg } = info
   const [filter, setFilter] = useState(products)
+  const cat = products.map(p => p.specs)
   const handleFilter = e => {
     const buttonValue = e.target.innerText
     const filter = products.filter(p => p.specs === buttonValue)
@@ -110,22 +111,37 @@ function CategoryCarousel(info) {
 
         <SimpleGrid
           columns={{ base: 3, sm: 4, md: 5 }}
-          gap={{ base: 0, md: 1 }}
+          gap={{ base: 2, md: 3 }}
           mx={2}
         >
-          <Button
-            fontSize={{ base: 'description', sm: 'general', md: 'normal' }}
-            fontWeight={'semibold'}
-            onClick={e => setFilter(products)}
-          >
-            Most Popular
-          </Button>
+          {cat[0] !== null && (
+            <Button
+              fontSize={{ base: 'description', sm: 'general', md: 'normal' }}
+              fontWeight={'semibold'}
+              onClick={e => setFilter(products)}
+              borderRadius='0'
+              h={'20px'}
+              _focus={{
+                color: 'black',
+                borderBottom: '2px solid #0156FF',
+              }}
+              align='center'
+            >
+              Most Popular
+            </Button>
+          )}
           {products.map(p => (
             <Button
               fontSize={{ base: 'description', sm: 'general', md: 'normal' }}
               fontWeight={'semibold'}
               onClick={e => handleFilter(e)}
               key={p.id}
+              borderRadius='0'
+              h={'20px'}
+              _focus={{
+                color: 'black',
+                borderBottom: '2px solid #0156FF',
+              }}
             >
               {p.specs}
             </Button>

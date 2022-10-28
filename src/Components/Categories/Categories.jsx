@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Category, CategoryCarousel } from '..'
 
 function Categories() {
-  const { loading, data, error } = useSelector((state) => state.productos)
+  const { loading, data, error } = useSelector(state => state.productos)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -18,8 +18,8 @@ function Categories() {
       {loading ? (
         <div>cargando...</div>
       ) : (
-        data.map((info) => (
-          <Stack my={2} key={info.id}>
+        data.map(info => (
+          <Stack my={4} key={info.id}>
             <Show below={'lg'}>
               <CategoryCarousel {...info} key={info.id} />
             </Show>
