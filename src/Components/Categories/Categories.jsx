@@ -1,9 +1,10 @@
+import { storeProducts } from '@/Helpers'
+import { getProducts } from '@/Store/features/Products/index'
+import { Hide, Show, Stack } from '@chakra-ui/react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getProducts } from '@/Store/features/Products/index'
-import { storeProducts } from './../../Helpers/storeProducts'
-import { Box, Flex, Image, Stack, Text } from '@chakra-ui/react'
-import Categorie from './Categorie'
+import { Category, CategoryCarousel } from '..'
+
 function Categories() {
   const { loading, data, error } = useSelector((state) => state.productos)
   const dispatch = useDispatch()
@@ -18,8 +19,13 @@ function Categories() {
         <div>cargando...</div>
       ) : (
         data.map((info) => (
-          <Stack mb={5}>
-            <Categorie {...info} key={info.id} />
+          <Stack my={2} key={info.id}>
+            <Show below={'lg'}>
+              <CategoryCarousel {...info} key={info.id} />
+            </Show>
+            <Hide below={'lg'}>
+              <Category {...info} key={info.id} />
+            </Hide>
           </Stack>
         ))
       )}

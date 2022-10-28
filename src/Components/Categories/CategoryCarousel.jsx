@@ -1,11 +1,20 @@
-import { NewData } from '@/Helpers'
 import { ProductCard } from '@/Utils'
-import { Box } from '@chakra-ui/react'
+import { Box, Button, Flex, Link, SimpleGrid, Text } from '@chakra-ui/react'
+import { useState } from 'react'
+
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
 
-function CategoryCarousel() {
+function CategoryCarousel(info) {
+  const { name, products, id, bg } = info
+  const [filter, setFilter] = useState(products)
+  const handleFilter = (e) => {
+    const buttonValue = e.target.innerText
+    const filter = products.filter((p) => p.specs === buttonValue)
+    setFilter(filter)
+  }
+
   const settings = {
     arrows: false,
     infinite: false,
@@ -60,25 +69,92 @@ function CategoryCarousel() {
   }
 
   return (
-    <Box fontFamily={'body'} px={4} my={6}>
-      <Slider {...settings}>
-        {NewData.map((data) => {
-          const { id, stock, img, icon, description, oldPrice, price } = data
+    <Box
+      display={'flex'}
+      flexDirection={{ base: 'column' }}
+      fontFamily={'body'}
+    >
+      <Box
+        display={'flex'}
+        flexDirection={{ base: 'column', md: 'column-reverse' }}
+      >
+        <Flex
+          maxW={{ base: '100%' }}
+          w={'100%'}
+          maxH={{ base: '100%', md: '350px' }}
+          h={'100%'}
+          backgroundImage={bg}
+          backgroundSize={'cover'}
+          backgroundRepeat={'no-repeat'}
+          direction='column'
+          justify='center'
+          key={id}
+          gap={6}
+          py={6}
+        >
+          <Text
+            color={'white'}
+            fontWeight={'bold'}
+            fontSize={{ base: 'paragraph', lg: 'category' }}
+            textAlign='center'
+          >
+            {name}
+          </Text>
+          <Link
+            color={'white'}
+            fontWeight={'normal'}
+            fontSize={{ base: 'review', md: 'description' }}
+            textDecorationLine='underline'
+            textAlign='center'
+          >
+            See all products
+          </Link>
+        </Flex>
 
-          return (
-            <ProductCard
-              key={id}
-              id={id}
-              stock={stock}
-              img={img}
-              icon={icon}
-              description={description}
-              oldPrice={oldPrice}
-              price={price}
-            />
-          )
-        })}
-      </Slider>
+        <SimpleGrid
+          columns={{ base: 3, sm: 4, md: 5 }}
+          gap={{ base: 0, md: 1 }}
+          mx={2}
+        >
+          {products.map((p) => (
+            <Button
+              fontSize={{ base: 'description', sm: 'general', md: 'normal' }}
+              fontWeight={'semibold'}
+              onClick={(e) => handleFilter(e)}
+              key={p.id}
+            >
+              {p.specs}
+            </Button>
+          ))}
+        </SimpleGrid>
+      </Box>
+
+      <Box px={4} my={6}>
+        <Slider {...settings}>
+          {filter.map((data) => {
+            const { id, stock, images, icon, title, price } = data
+
+            return (
+              <ProductCard
+                key={id}
+                id={id}
+                stock={stock}
+                img={images}
+                icon={icon}
+                description={title}
+                oldPrice={parseInt(price).toLocaleString('en-US', {
+                  style: 'currency',
+                  currency: 'USD',
+                })}
+                price={parseInt(price).toLocaleString('en-US', {
+                  style: 'currency',
+                  currency: 'USD',
+                })}
+              />
+            )
+          })}
+        </Slider>
+      </Box>
     </Box>
   )
 }
