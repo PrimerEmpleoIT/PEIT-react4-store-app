@@ -25,6 +25,7 @@ export default function NewProducts() {
     arrows: true,
     dots: false,
     infinite: true,
+    lazyLoad: true,
     speed: 500,
     slidesToShow: slides,
     slidesToScroll: 5,

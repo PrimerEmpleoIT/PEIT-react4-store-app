@@ -1,4 +1,4 @@
-import availale from '@/assets/NewProducts/available.svg'
+import available from '@/assets/NewProducts/available.svg'
 import checkAvailability from '@/assets/NewProducts/check-availability.svg'
 import Gabinete from '@/assets/NewProducts/Gabinete.webp'
 import Monitor from '@/assets/NewProducts/Monitor.webp'
@@ -8,10 +8,10 @@ export const NewData = [
   {
     id: crypto.randomUUID(),
     stock: 'in stock',
-    icon: availale,
+    icon: available,
     img: Gabinete,
     description: 'ExDisplay: MSI pro 16 Flex-036AU 15.6 Multitouch All-In-One',
-    oldPrice: 499,
+    oldPrice: 1500,
     price: 1200,
   },
   {
@@ -20,25 +20,25 @@ export const NewData = [
     stock: 'check availability',
     img: Monitor,
     description: 'ExDisplay: MSI pro 16 Flex-036AU 15.6 Multitouch All-In-One',
-    oldPrice: 499,
+    oldPrice: 960,
     price: 800,
   },
   {
     id: crypto.randomUUID(),
     stock: 'in stock',
-    icon: availale,
+    icon: available,
     img: Notebook,
     description: 'ExDisplay: MSI pro 16 Flex-036AU 15.6 Multitouch All-In-One',
-    oldPrice: 499,
+    oldPrice: 2800,
     price: 2500,
   },
   {
     id: crypto.randomUUID(),
     stock: 'in stock',
-    icon: availale,
+    icon: available,
     img: Gabinete,
     description: 'ExDisplay: MSI pro 16 Flex-036AU 15.6 Multitouch All-In-One',
-    oldPrice: 499,
+    oldPrice: 1500,
     price: 1200,
   },
   {
@@ -47,16 +47,16 @@ export const NewData = [
     stock: 'check availability',
     img: Monitor,
     description: 'ExDisplay: MSI pro 16 Flex-036AU 15.6 Multitouch All-In-One',
-    oldPrice: 499,
+    oldPrice: 960,
     price: 800,
   },
   {
     id: crypto.randomUUID(),
     stock: 'in stock',
-    icon: availale,
+    icon: available,
     img: Notebook,
     description: 'ExDisplay: MSI pro 16 Flex-036AU 15.6 Multitouch All-In-One',
-    oldPrice: 499,
+    oldPrice: 2800,
     price: 2500,
   },
 ]
