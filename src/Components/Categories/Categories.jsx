@@ -1,6 +1,6 @@
 import { storeProducts } from '@/Helpers'
 import { getProducts } from '@/Store/features/Products/index'
-import { Hide, Show, Stack } from '@chakra-ui/react'
+import { Hide, Show, Stack, Spinner, Flex } from '@chakra-ui/react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Category, CategoryCarousel } from '..'
@@ -10,13 +10,15 @@ function Categories() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getProducts(storeProducts))
+    setTimeout(dispatch(getProducts(storeProducts)), 10000)
   }, [])
 
   return (
     <>
       {loading ? (
-        <div>cargando...</div>
+        <Flex justify='center' mt={10}>
+          <Spinner thickness='4px' color='blue.500' boxSize={24} />
+        </Flex>
       ) : (
         data.map(info => (
           <Stack my={4} key={info.id}>
