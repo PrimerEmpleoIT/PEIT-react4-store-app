@@ -1,16 +1,16 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getProducts } from "@/Store/features/Products/index";
-import { storeProducts } from "./../../Helpers/storeProducts";
-import { Box, Flex, Image, Stack, Text } from "@chakra-ui/react";
-import Categorie from "./Categorie";
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { getProducts } from '@/Store/features/Products/index'
+import { storeProducts } from './../../Helpers/storeProducts'
+import { Box, Flex, Image, Stack, Text } from '@chakra-ui/react'
+import Categorie from './Categorie'
 function Categories() {
-  const { loading, data, error } = useSelector((state) => state.productos);
-  const dispatch = useDispatch();
+  const { loading, data, error } = useSelector((state) => state.productos)
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getProducts(storeProducts));
-  }, []);
+    dispatch(getProducts(storeProducts))
+  }, [])
 
   return (
     <>
@@ -24,7 +24,7 @@ function Categories() {
         ))
       )}
     </>
-  );
+  )
 }
 
-export default Categories;
+export default Categories
