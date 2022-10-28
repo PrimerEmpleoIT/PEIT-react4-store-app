@@ -1,6 +1,7 @@
 import {
   Ads,
   Banner,
+  Categories,
   FollowUs,
   NewProductSlider,
   Sponsors,
@@ -13,6 +14,7 @@ export default function HomeRoute() {
       <Banner />
       <NewProductSlider />
       <Ads />
+      <Categories />
       <Sponsors />
       <FollowUs />
       <Testimonials />
