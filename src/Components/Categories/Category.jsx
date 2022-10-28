@@ -8,14 +8,15 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function Category(info) {
   const { name, products, id, bg } = info
   const [filter, setFilter] = useState(products)
-  const handleFilter = (e) => {
+  const cat = products.map(p => p.specs)
+  const handleFilter = e => {
     const buttonValue = e.target.innerText
-    const filter = products.filter((p) => p.specs === buttonValue)
+    const filter = products.filter(p => p.specs === buttonValue)
     setFilter(filter)
   }
 
@@ -26,15 +27,37 @@ function Category(info) {
       mx={{ base: 2, md: 1, xl: 2, '2xl': 0 }}
     >
       <SimpleGrid
-        columns={{ base: 3, sm: 4, md: 5 }}
+        columns={{ base: 3, sm: 4, md: 6 }}
         justifyItems={'self-start'}
+        mb={4}
       >
-        {products.map((p) => (
+        {cat[0] !== null && (
           <Button
             fontSize={{ base: 'description', sm: 'general', md: 'normal' }}
             fontWeight={'semibold'}
-            onClick={(e) => handleFilter(e)}
+            onClick={e => setFilter(products)}
+            borderRadius='0'
+            h={'20px'}
+            _focus={{
+              color: 'black',
+              borderBottom: '2px solid #0156FF',
+            }}
+          >
+            Most Popular
+          </Button>
+        )}
+        {products.map(p => (
+          <Button
+            fontSize={{ base: 'description', sm: 'general', md: 'normal' }}
+            fontWeight={'semibold'}
+            onClick={e => handleFilter(e)}
             key={p.id}
+            borderRadius='0'
+            h={'20px'}
+            _focus={{
+              color: 'black',
+              borderBottom: '2px solid #0156FF',
+            }}
           >
             {p.specs}
           </Button>
@@ -79,7 +102,7 @@ function Category(info) {
         </VStack>
 
         <Flex my={2}>
-          {filter.map((data) => {
+          {filter.map(data => {
             const { id, stock, images, icon, title, price } = data
 
             return (

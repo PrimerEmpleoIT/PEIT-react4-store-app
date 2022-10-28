@@ -9,9 +9,10 @@ import 'slick-carousel/slick/slick.css'
 function CategoryCarousel(info) {
   const { name, products, id, bg } = info
   const [filter, setFilter] = useState(products)
-  const handleFilter = (e) => {
+  const cat = products.map(p => p.specs)
+  const handleFilter = e => {
     const buttonValue = e.target.innerText
-    const filter = products.filter((p) => p.specs === buttonValue)
+    const filter = products.filter(p => p.specs === buttonValue)
     setFilter(filter)
   }
 
@@ -74,10 +75,7 @@ function CategoryCarousel(info) {
       flexDirection={{ base: 'column' }}
       fontFamily={'body'}
     >
-      <Box
-        display={'flex'}
-        flexDirection={{ base: 'column', md: 'column-reverse' }}
-      >
+      <Box display={'flex'} flexDirection={{ base: 'column', md: 'column' }}>
         <Flex
           maxW={{ base: '100%' }}
           w={'100%'}
@@ -113,15 +111,37 @@ function CategoryCarousel(info) {
 
         <SimpleGrid
           columns={{ base: 3, sm: 4, md: 5 }}
-          gap={{ base: 0, md: 1 }}
+          gap={{ base: 2, md: 3 }}
           mx={2}
         >
-          {products.map((p) => (
+          {cat[0] !== null && (
             <Button
               fontSize={{ base: 'description', sm: 'general', md: 'normal' }}
               fontWeight={'semibold'}
-              onClick={(e) => handleFilter(e)}
+              onClick={e => setFilter(products)}
+              borderRadius='0'
+              h={'20px'}
+              _focus={{
+                color: 'black',
+                borderBottom: '2px solid #0156FF',
+              }}
+              align='center'
+            >
+              Most Popular
+            </Button>
+          )}
+          {products.map(p => (
+            <Button
+              fontSize={{ base: 'description', sm: 'general', md: 'normal' }}
+              fontWeight={'semibold'}
+              onClick={e => handleFilter(e)}
               key={p.id}
+              borderRadius='0'
+              h={'20px'}
+              _focus={{
+                color: 'black',
+                borderBottom: '2px solid #0156FF',
+              }}
             >
               {p.specs}
             </Button>
@@ -131,7 +151,7 @@ function CategoryCarousel(info) {
 
       <Box px={4} my={6}>
         <Slider {...settings}>
-          {filter.map((data) => {
+          {filter.map(data => {
             const { id, stock, images, icon, title, price } = data
 
             return (
