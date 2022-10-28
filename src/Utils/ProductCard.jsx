@@ -46,7 +46,10 @@ function ProductCard({ id, stock, img, icon, description, oldPrice, price }) {
         >
           {description}
         </Text>
-        <del> $ {oldPrice}</del>
+        <Text color={'disable'} textDecorationLine={'line-through'}>
+          {' '}
+          $ {oldPrice}
+        </Text>
         <Heading as={'h2'} fontSize={'paragraph'} fontWeight={'bold'}>
           {' '}
           $ {price}
