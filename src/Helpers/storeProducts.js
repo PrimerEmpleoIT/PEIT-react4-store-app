@@ -1,10 +1,15 @@
+import CustomeBuilds from '@/assets/Categories/CustomeBuilds.webp'
+import Desktops from '@/assets/Categories/Desktops.webp'
+import GamingMonitor from '@/assets/Categories/GamingMonitor.webp'
+import MSILaptops from '@/assets/Categories/MSILaptops.webp'
 import available from '@/assets/NewProducts/available.svg'
 import checkAvailability from '@/assets/NewProducts/check-availability.svg'
 
 export const storeProducts = [
   {
     id: 1,
-    name: 'Custom Builds',
+    name: 'Custome Builds',
+    bg: CustomeBuilds,
     products: [
       {
         id: crypto.randomUUID(),
@@ -96,6 +101,7 @@ export const storeProducts = [
   {
     id: 2,
     name: 'MSI Laptops',
+    bg: MSILaptops,
     products: [
       {
         id: crypto.randomUUID(),
@@ -187,6 +193,7 @@ export const storeProducts = [
   {
     id: 3,
     name: 'Desktops',
+    bg: Desktops,
     products: [
       {
         id: crypto.randomUUID(),
@@ -278,6 +285,7 @@ export const storeProducts = [
   {
     id: 4,
     name: 'Gaming Monitors',
+    bg: GamingMonitor,
     products: [
       {
         id: crypto.randomUUID(),
