@@ -10,7 +10,9 @@ function Categories() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    setTimeout(dispatch(getProducts(storeProducts)), 10000)
+    setTimeout(function () {
+      dispatch(getProducts(storeProducts))
+    }, 3000)
   }, [])
 
   return (
