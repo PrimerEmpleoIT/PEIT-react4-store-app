@@ -1,8 +1,8 @@
-import msi1 from '@/assets/banner/msi1.webp'
-import msi2 from '@/assets/banner/msi2.webp'
-import msi3 from '@/assets/banner/msi3.webp'
-import msi4 from '@/assets/banner/msi4.webp'
-import msi5 from '@/assets/banner/msi5.webp'
+import msi1 from '@/assets/Banner/msi1.webp'
+import msi2 from '@/assets/Banner/msi2.webp'
+import msi3 from '@/assets/Banner/msi3.webp'
+import msi4 from '@/assets/Banner/msi4.webp'
+import msi5 from '@/assets/Banner/msi5.webp'
 
 export const SlideData = [
   {
