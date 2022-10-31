@@ -65,8 +65,8 @@ export default function NewProducts() {
               img={img}
               icon={icon}
               description={description}
-              oldPrice={oldPrice}
-              price={price}
+              oldPrice={oldPrice.toFixed(2)}
+              price={price.toFixed(2)}
             />
           )
         })}

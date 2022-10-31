@@ -65,4 +65,14 @@ export const NewData = [
     oldPrice: 2800,
     price: 2500,
   },
+  {
+    Name: 'cpu',
+    id: crypto.randomUUID(),
+    stock: 'in stock',
+    icon: available,
+    img: Gabinete,
+    description: 'ExDisplay: MSI pro 16 Flex-036AU 15.6 Multitouch All-In-One',
+    oldPrice: 1500,
+    price: 1200,
+  },
 ]
