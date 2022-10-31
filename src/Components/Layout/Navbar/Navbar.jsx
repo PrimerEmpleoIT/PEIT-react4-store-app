@@ -1,5 +1,6 @@
 import Logo from '@/assets/navBar/Logo.svg'
 import ProfilePhoto from '@/assets/navBar/ProfilePhoto.svg'
+import Dropdown from '@/Components/ShoppingCart/DropDown'
 import { links, pagesRoutes } from '@/Helpers'
 import {
   Box,
@@ -34,7 +35,7 @@ function Navbar() {
               <Image src={Logo} h='30px' w='40px' alt='' />
             </Link>
             <Flex gap={{ md: 3, lg: 6, xl: 8 }}>
-              {links.map((link) => {
+              {links.map(link => {
                 const { id, title } = link
 
                 return (
@@ -79,6 +80,7 @@ function Navbar() {
               icon={<GrCart />}
               fontSize={'large'}
             />
+            <Dropdown />
             <Button w='60px' h='36px' bgColor='transparent'>
               <Image src={ProfilePhoto} alt='profile-icon' />
             </Button>

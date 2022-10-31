@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image, Text } from '@chakra-ui/react'
+import { Box, Flex, Heading, Image, Text, Button } from '@chakra-ui/react'
 import { StarRating } from '.'
 
 function ProductCard({ id, stock, img, icon, description, oldPrice, price }) {
@@ -38,6 +38,7 @@ function ProductCard({ id, stock, img, icon, description, oldPrice, price }) {
             </Heading>
           </Flex>
         )}
+
         <Image src={img} alt='img-product' w={48} />
         <StarRating />
         <Text

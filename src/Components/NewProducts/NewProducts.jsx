@@ -54,7 +54,7 @@ export default function NewProducts() {
       </Flex>
 
       <Slider {...settings}>
-        {NewData.map((data) => {
+        {NewData.map(data => {
           const { id, stock, img, icon, description, oldPrice, price } = data
 
           return (
