@@ -4,9 +4,16 @@ import { NewData } from '@/Helpers'
 
 const styles = {
   menu: {
+    position: 'absolute',
+    left: '-240px',
     color: 'black',
     fontFamily: 'Poppins',
     border: 'none',
+    borderRadius: '10px',
+    margin: '0px',
+    padding: '20px',
+    backgroundColor: '#fff',
+    boxShadow: ' 0px 8px 8px 0px rgba(255,255,255,0.5)',
   },
 }
 
@@ -30,7 +37,7 @@ const Dropdown = () => {
         >
           {onCart.length}
         </MenuButton>
-        <MenuList minWidth='300px' style={styles.menu}>
+        <MenuList minWidth='400px' style={styles.menu}>
           {onCart.map(data => {
             const { props } = data
 
@@ -43,10 +50,10 @@ const Dropdown = () => {
                 }}
               >
                 <span>
-                  <img src={data.img} alt='' width='30' height='30' />
+                  <img src={data.img} alt='' width='36' height='36' />
                 </span>
                 <span>{data.Name}</span>
-                <span> ${data.price},00</span>
+                <span> ${data.price.toFixed(2)}</span>
               </MenuItem>
             )
           })}
