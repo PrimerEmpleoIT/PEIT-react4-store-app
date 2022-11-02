@@ -1,6 +1,19 @@
 import { Box, Flex, Heading, Image, Text, Button } from '@chakra-ui/react'
 import { StarRating } from '.'
 
+const styles = {
+  button: {
+    fontFamily: 'Poppins',
+    backgroundColor: 'transparent',
+    border: 'solid 1px',
+    with: '20px',
+    height: '15px',
+    fontSize: '10px',
+    color: 'available',
+    margin: '9px',
+  },
+}
+
 function ProductCard({ id, stock, img, icon, description, oldPrice, price }) {
   return (
     <Box key={id} fontFamily={'body'} mx={{ base: '4', lg: 2, xl: 2 }}>
@@ -38,7 +51,7 @@ function ProductCard({ id, stock, img, icon, description, oldPrice, price }) {
             </Heading>
           </Flex>
         )}
-
+        <Button style={styles.button}>comprar</Button>
         <Image src={img} alt='img-product' w={48} />
         <StarRating />
         <Text
