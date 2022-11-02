@@ -4,11 +4,11 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const categoriesApi = createApi({
   reducerPath: 'categoriesApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://dummyjson.com/',
+    baseUrl: 'https://tech-store-api.onrender.com/',
   }),
   endpoints: builder => ({
     getAllCategories: builder.query({
-      query: () => 'products',
+      query: () => 'categories',
     }),
   }),
 })
@@ -33,8 +33,8 @@ export const { useGetAllCategoriesQuery } = categoriesApi
 //   },
 // });
 
-// //exporto las acciones para que se puedan utilizar en cualquier parte
-// export const { getProducts } = products.actions;
+//exporto las acciones para que se puedan utilizar en cualquier parte
+// export const { getProducts } = products.actions
 
 // //export el reducer para el store
-// export default products.reducer;
+// export default products.reducer

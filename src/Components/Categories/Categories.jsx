@@ -8,7 +8,7 @@ import { useGetAllCategoriesQuery } from '@/Store/features/Products'
 function Categories() {
   // const { loading, data, error } = useSelector(state => state.productos)
   // const dispatch = useDispatch()
-  const { data } = useGetAllCategoriesQuery()
+  const { data, error, isLoading } = useGetAllCategoriesQuery()
   console.log(data)
 
   useEffect(() => {
