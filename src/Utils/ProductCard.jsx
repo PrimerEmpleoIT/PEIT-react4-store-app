@@ -15,7 +15,16 @@ const styles = {
   },
 }
 
-function ProductCard({ id, stock, img, icon, description, oldPrice, price }) {
+function ProductCard({
+  id,
+  stock,
+  img,
+  icon,
+  description,
+  oldPrice,
+  price,
+  quantity = 1,
+}) {
   const dispatch = useDispatch()
   return (
     <Box key={id} fontFamily={'body'} mx={{ base: '4', lg: 2, xl: 2 }}>
@@ -57,7 +66,16 @@ function ProductCard({ id, stock, img, icon, description, oldPrice, price }) {
           style={styles.button}
           onClick={() =>
             dispatch(
-              addToCart({ id, stock, img, icon, description, oldPrice, price })
+              addToCart({
+                id,
+                stock,
+                img,
+                icon,
+                description,
+                oldPrice,
+                price,
+                quantity,
+              })
             )
           }
         >

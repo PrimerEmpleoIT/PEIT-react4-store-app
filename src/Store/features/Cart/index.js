@@ -8,11 +8,30 @@ const cartSlice = createSlice({
   },
   reducers: {
     addToCart: (state, action) => {
-      state.producto = [...state.producto, action.payload]
-      state.quantity = state.quantity + 1
+      let isNewProduct = false
+      state.producto.map((p, index) => {
+        if (p.id === action.payload.id) {
+          state.producto[index].quantity++
+          isNewProduct = true
+        }
+      })
+
+      state.producto = !isNewProduct
+        ? [...state.producto, action.payload]
+        : [...state.producto]
+      state.quantity++
     },
   },
 })
 export const { addToCart } = cartSlice.actions
 
 export default cartSlice.reducer
+
+// id,
+// stock,
+// img,
+// icon,
+// description,
+// oldPrice,
+// price,
+// quantity,

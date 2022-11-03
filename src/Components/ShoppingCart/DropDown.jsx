@@ -8,6 +8,7 @@ import {
   Text,
   Stack,
   MenuDivider,
+  Image,
 } from '@chakra-ui/react'
 import { useState } from 'react'
 import { NewData } from '@/Helpers'
@@ -64,33 +65,30 @@ const Dropdown = () => {
           <MenuDivider />
           {onCart.producto.map(p => {
             return (
-              <MenuItem
-                style={{
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  marginTop: '12px',
-                }}
-                key={p.id}
-              >
-                <span>
-                  <img src={p.img} alt='' width='36' height='36' />
-                </span>
-                <span>{p.description}</span>
-                <span> {p.price}</span>
-                <span>{p.quantity}</span>
-              </MenuItem>
+              <>
+                <MenuItem key={p.id}>
+                  <Flex justify='space-around' alignItems='center'>
+                    <Text>{p.quantity}X</Text>
+                    <Image
+                      src={p.img}
+                      alt='producto'
+                      width='65px'
+                      height='65px'
+                    />
+
+                    <Text>{p.description}</Text>
+                  </Flex>
+                </MenuItem>
+                <MenuDivider />
+              </>
             )
           })}
-          {/* <MenuItem
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-              marginTop: '12px',
-            }}
-          >
-            <span>Total</span>
-            <span> $100.000,00 </span>
-          </MenuItem> */}
+
+          <Flex direction='column' justify='space-around' alignItems='center'>
+            <Text>Sub-Total:1000</Text>
+            <Button>Go to checkout</Button>
+            <Button>Check out with</Button>
+          </Flex>
         </MenuList>
       </Menu>
     </>
