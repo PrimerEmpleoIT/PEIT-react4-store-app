@@ -12,11 +12,19 @@ const styles = {
     color: 'available',
     margin: '9px',
   },
+  card: {
+    hover: { backgroundColor: 'green' },
+  },
 }
 
 function ProductCard({ id, stock, img, icon, description, oldPrice, price }) {
   return (
-    <Box key={id} fontFamily={'body'} mx={{ base: '4', lg: 2, xl: 2 }}>
+    <Box
+      style={card.styles}
+      key={id}
+      fontFamily={'body'}
+      mx={{ base: '4', lg: 2, xl: 2 }}
+    >
       <Box
         fontSize={'general'}
         bg='white'
