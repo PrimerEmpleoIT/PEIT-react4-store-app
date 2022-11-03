@@ -1,6 +1,18 @@
-import { Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react'
+import {
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Flex,
+  Button,
+  Text,
+  Stack,
+  MenuDivider,
+} from '@chakra-ui/react'
 import { useState } from 'react'
 import { NewData } from '@/Helpers'
+import { useSelector } from 'react-redux'
+import { useEffect } from 'react'
 
 const styles = {
   menu: {
@@ -18,7 +30,12 @@ const styles = {
 }
 
 const Dropdown = () => {
-  let [onCart, setOnCart] = useState([NewData[0], NewData[1], NewData[5]])
+  const onCart = useSelector(state => state.cart)
+  // let [onCart, setOnCart] = useState([NewData[0], NewData[1]])
+  useEffect(() => {
+    console.log(onCart.quantity.lenght)
+    console.log(onCart.producto.map(p => p.name))
+  }, [onCart])
 
   return (
     <>
@@ -37,10 +54,15 @@ const Dropdown = () => {
         >
           {onCart.length}
         </MenuButton>
-        <MenuList minWidth='400px' style={styles.menu}>
-          {onCart.map(data => {
-            const { props } = data
 
+        <MenuList maxW='310px'>
+          <Flex direction='column' width='310px' alignItems='center' gap={3}>
+            <Text>My Cart</Text>
+            <Text>{onCart.quantity} on cart</Text>
+            <Button> View or Edit Your Cart</Button>
+          </Flex>
+          <MenuDivider />
+          {onCart.producto.map(p => {
             return (
               <MenuItem
                 style={{
@@ -48,16 +70,18 @@ const Dropdown = () => {
                   justifyContent: 'space-between',
                   marginTop: '12px',
                 }}
+                key={p.id}
               >
                 <span>
-                  <img src={data.img} alt='' width='36' height='36' />
+                  <img src={p.img} alt='' width='36' height='36' />
                 </span>
-                <span>{data.Name}</span>
-                <span> ${data.price.toFixed(2)}</span>
+                <span>{p.description}</span>
+                <span> {p.price}</span>
+                <span>{p.quantity}</span>
               </MenuItem>
             )
           })}
-          <MenuItem
+          {/* <MenuItem
             style={{
               display: 'flex',
               justifyContent: 'space-between',
@@ -66,7 +90,7 @@ const Dropdown = () => {
           >
             <span>Total</span>
             <span> $100.000,00 </span>
-          </MenuItem>
+          </MenuItem> */}
         </MenuList>
       </Menu>
     </>
