@@ -12,7 +12,7 @@ import {
   Image,
   Link,
 } from '@chakra-ui/react'
-import { GrCart } from 'react-icons/gr'
+
 import { NavLink } from 'react-router-dom'
 import NavBarMobileScreen from './NavBarMobileScreen'
 
@@ -74,12 +74,6 @@ function Navbar() {
             </Flex>
           </HStack>
           <HStack align='center'>
-            <IconButton
-              aria-label='Cart'
-              size='lg'
-              icon={<GrCart />}
-              fontSize={'large'}
-            />
             <Dropdown />
             <Button w='60px' h='36px' bgColor='transparent'>
               <Image src={ProfilePhoto} alt='profile-icon' />

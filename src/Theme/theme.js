@@ -9,6 +9,7 @@ const theme = extendTheme({
     xl: '1280px',
     '2xl': '1440px',
     '3xl': '1560px',
+    '4xl': '1920',
   },
   fonts: {
     heading: `'Poppins', ${base.fonts.heading}`,
