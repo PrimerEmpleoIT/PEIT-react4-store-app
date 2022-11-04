@@ -12,7 +12,7 @@ const ImageSlider = ({ slides }) => {
       dynamicHeight={true}
       showThumbs={false}
     >
-      {slides.map((slide) => {
+      {slides.map(slide => {
         const { id, image } = slide
 
         return (

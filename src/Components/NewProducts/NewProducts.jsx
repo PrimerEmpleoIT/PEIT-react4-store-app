@@ -1,6 +1,6 @@
 import { NewData } from '@/Helpers'
 import { ProductCard } from '@/Utils'
-import { Flex, Text } from '@chakra-ui/react'
+import { Flex, Text, Box, background } from '@chakra-ui/react'
 import { useWindowWidth } from '@react-hook/window-size'
 import { useEffect, useState } from 'react'
 import Slider from 'react-slick'
@@ -58,16 +58,18 @@ export default function NewProducts() {
           const { id, stock, img, icon, description, oldPrice, price } = data
 
           return (
-            <ProductCard
-              key={id}
-              id={id}
-              stock={stock}
-              img={img}
-              icon={icon}
-              description={description}
-              oldPrice={oldPrice.toFixed(2)}
-              price={price.toFixed(2)}
-            />
+            <Box>
+              <ProductCard
+                key={id}
+                id={id}
+                stock={stock}
+                img={img}
+                icon={icon}
+                description={description}
+                oldPrice={oldPrice.toFixed(2)}
+                price={price.toFixed(2)}
+              />
+            </Box>
           )
         })}
       </Slider>

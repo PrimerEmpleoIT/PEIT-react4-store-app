@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, Image, Text, Button } from '@chakra-ui/react'
 import { StarRating } from '.'
+import './productCard.css'
 
 const styles = {
   button: {
@@ -12,15 +13,13 @@ const styles = {
     color: 'available',
     margin: '9px',
   },
-  card: {
-    hover: { backgroundColor: 'green' },
-  },
 }
 
 function ProductCard({ id, stock, img, icon, description, oldPrice, price }) {
   return (
     <Box
-      style={card.styles}
+      className='Hover'
+      style={{ padding: '5px' }}
       key={id}
       fontFamily={'body'}
       mx={{ base: '4', lg: 2, xl: 2 }}
@@ -59,7 +58,7 @@ function ProductCard({ id, stock, img, icon, description, oldPrice, price }) {
             </Heading>
           </Flex>
         )}
-        <Button style={styles.button}>comprar</Button>
+
         <Image src={img} alt='img-product' w={48} />
         <StarRating />
         <Text

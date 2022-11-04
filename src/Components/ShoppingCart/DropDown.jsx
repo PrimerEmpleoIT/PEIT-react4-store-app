@@ -35,7 +35,7 @@ const Dropdown = () => {
           w={{ md: '3rem', xl: '4rem' }}
           borderRadius='66px'
         >
-          {onCart.length}
+          0
         </MenuButton>
         <MenuList minWidth='400px' style={styles.menu}>
           {onCart.map(data => {
@@ -65,7 +65,7 @@ const Dropdown = () => {
             }}
           >
             <span>Total</span>
-            <span> $100.000,00 </span>
+            <span> $4500,00 </span>
           </MenuItem>
         </MenuList>
       </Menu>
