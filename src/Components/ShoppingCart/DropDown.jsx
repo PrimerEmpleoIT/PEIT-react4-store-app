@@ -13,17 +13,14 @@ import {
 import { TiDeleteOutline } from 'react-icons/ti'
 import { TbEditCircle } from 'react-icons/tb'
 import PayPal from '@/assets/Cart/Group 106.svg'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { deleteCart } from '@/Store/features/Cart/index'
 import { useEffect } from 'react'
 
 const Dropdown = () => {
   const onCart = useSelector(state => state.cart)
-  // let [onCart, setOnCart] = useState([NewData[0], NewData[1]])
-  useEffect(() => {
-    console.log(
-      onCart.producto.reduce((acc, item) => acc + item.price * item.quantity, 0)
-    )
-  }, [onCart])
+  const dispatch = useDispatch()
+  useEffect(() => {}, [onCart])
 
   return (
     <>
@@ -115,6 +112,7 @@ const Dropdown = () => {
                         color='grey'
                         h='22px'
                         w='22px'
+                        onClick={() => dispatch(deleteCart(p.id))}
                       />
 
                       <IconButton
