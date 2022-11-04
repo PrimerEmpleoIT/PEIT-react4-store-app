@@ -1,6 +1,7 @@
 import Logo from '@/assets/navBar/Logo.svg'
 import ProfilePhoto from '@/assets/navBar/ProfilePhoto.svg'
 import { links, pagesRoutes } from '@/Helpers'
+import Dropdown from '@/Components/ShoppingCart/DropDown'
 import {
   Box,
   Button,
@@ -53,13 +54,8 @@ function NavBarMobileScreen() {
             Our deals
           </Button>
         </HStack>
-        <HStack>
-          <IconButton
-            aria-label='Cart'
-            icon={<GrCart fontSize={24} />}
-            fontSize='large'
-            color='transparent'
-          />
+        <HStack align='center'>
+          <Dropdown />
           <Button w='60px' h='36px' bgColor='transparent'>
             <Image src={ProfilePhoto} alt='' />
           </Button>
@@ -81,7 +77,7 @@ function NavBarMobileScreen() {
             <Divider color={'empty'} w={'90%'} mx={4} />
           </Flex>
           <DrawerBody>
-            {links.map((link) => {
+            {links.map(link => {
               const { id, title } = link
 
               return (
