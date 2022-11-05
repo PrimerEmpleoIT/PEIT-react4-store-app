@@ -4,7 +4,8 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 export const categoriesApi = createApi({
   reducerPath: 'categoriesApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'https://tech-store-api.onrender.com/',
+    baseUrl:
+      'https://cors-anywhere.herokuapp.com/http://tech-store-api.onrender.com',
   }),
   endpoints: builder => ({
     getAllCategories: builder.query({
