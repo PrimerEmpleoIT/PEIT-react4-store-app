@@ -38,23 +38,7 @@ function Categories() {
 
   return (
     <>
-      {isLoading ? (
-        <Flex justify='center' mt={10}>
-          <Spinner thickness='4px' color='blue.500' boxSize={24} />
-        </Flex>
-      ) : (
-        data.slice(2, 6).map(info => (
-          <Stack my={4} key={info.id}>
-            <Show below={'lg'}>
-              <div>{info.id}</div>
-              {/* <CategoryCarousel {...info} key={info.id} /> */}
-            </Show>
-            <Hide below={'lg'}>
-              {/* <Category {...info} key={info.id} /> */}
-            </Hide>
-          </Stack>
-        ))
-      )}
+      <div>..</div>
     </>
   )
 }

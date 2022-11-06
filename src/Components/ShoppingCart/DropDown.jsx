@@ -27,13 +27,12 @@ const Dropdown = () => {
   const dispatch = useDispatch()
 
   return (
-    <Menu>
+    <Menu pos='relative'>
       <MenuButton
         as={IconButton}
         fontSize={'large'}
         aria-label='cart'
         icon={<GrCart />}
-        pos='relative'
       >
         {onCart.producto.length}
       </MenuButton>
@@ -52,9 +51,9 @@ const Dropdown = () => {
           right={{
             base: '68px',
             md: '75px',
-            '2xl': '80px',
-            '3xl': '170px',
-            '4xl': '300px',
+            '2xl': '110px',
+            '3xl': '270px',
+            '4xl': '320px',
           }}
           top={{ base: '60px', md: '95px' }}
         >
