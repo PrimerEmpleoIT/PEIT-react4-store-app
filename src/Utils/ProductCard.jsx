@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Image, Text, Button } from '@chakra-ui/react'
 import { StarRating } from '.'
-import './productCard.css'
-
+import { useDispatch } from 'react-redux'
+import { addToCart } from '@/Store/features/Cart'
 const styles = {
   button: {
     fontFamily: 'Poppins',
@@ -15,7 +15,17 @@ const styles = {
   },
 }
 
-function ProductCard({ id, stock, img, icon, description, oldPrice, price }) {
+function ProductCard({
+  id,
+  stock,
+  img,
+  icon,
+  description,
+  oldPrice,
+  price,
+  quantity = 1,
+}) {
+  const dispatch = useDispatch()
   return (
     <Box
       className='Hover'
@@ -58,7 +68,25 @@ function ProductCard({ id, stock, img, icon, description, oldPrice, price }) {
             </Heading>
           </Flex>
         )}
-
+        <Button
+          style={styles.button}
+          onClick={() =>
+            dispatch(
+              addToCart({
+                id,
+                stock,
+                img,
+                icon,
+                description,
+                oldPrice,
+                price,
+                quantity,
+              })
+            )
+          }
+        >
+          comprar
+        </Button>
         <Image src={img} alt='img-product' w={48} />
         <StarRating />
         <Text
