@@ -51,7 +51,7 @@ const Dropdown = () => {
           right={{
             base: '68px',
             md: '75px',
-            '2xl': '110px',
+            '2xl': '90px',
             '3xl': '270px',
             '4xl': '320px',
           }}
