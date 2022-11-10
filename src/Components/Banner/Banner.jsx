@@ -1,6 +1,7 @@
-import { SlideData } from '@/Helpers'
 import { Box, Center } from '@chakra-ui/react'
+
 import { ImageSlider } from '..'
+import { SlideData } from '@/Helpers'
 
 export default function Banner() {
   return (
