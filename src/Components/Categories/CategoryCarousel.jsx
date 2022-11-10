@@ -1,10 +1,11 @@
-import { ProductCard } from '@/Utils'
-import { Box, Button, Flex, Link, SimpleGrid, Text } from '@chakra-ui/react'
-import { useState } from 'react'
-
-import Slider from 'react-slick'
 import 'slick-carousel/slick/slick-theme.css'
 import 'slick-carousel/slick/slick.css'
+
+import { Box, Button, Flex, Link, SimpleGrid, Text } from '@chakra-ui/react'
+
+import { ProductCard } from '@/Utils'
+import Slider from 'react-slick'
+import { useState } from 'react'
 
 function CategoryCarousel(info) {
   const { name, products, id, bg } = info
@@ -75,7 +76,11 @@ function CategoryCarousel(info) {
       flexDirection={{ base: 'column' }}
       fontFamily={'body'}
     >
-      <Box display={'flex'} flexDirection={{ base: 'column', md: 'column' }}>
+      <Box
+        display={'flex'}
+        gap={2}
+        flexDirection={{ base: 'column', md: 'column' }}
+      >
         <Flex
           maxW={{ base: '100%' }}
           w={'100%'}
@@ -111,8 +116,9 @@ function CategoryCarousel(info) {
 
         <SimpleGrid
           columns={{ base: 3, sm: 4, md: 5 }}
-          gap={{ base: 2, md: 3 }}
+          gap={{ base: 2, md: 2 }}
           mx={2}
+          maxW={'fit-content'}
         >
           {cat[0] !== null && (
             <Button
