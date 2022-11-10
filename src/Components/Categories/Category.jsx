@@ -1,4 +1,3 @@
-import { ProductCard } from '@/Utils'
 import {
   Button,
   Flex,
@@ -8,7 +7,9 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
+
+import { ProductCard } from '@/Utils'
+import { useState } from 'react'
 
 function Category(info) {
   const { name, products, id, bg } = info
@@ -23,13 +24,17 @@ function Category(info) {
   return (
     <Flex
       flexDirection={{ base: 'column' }}
+      gap={3}
       fontFamily={'body'}
-      mx={{ base: 2, md: 1, xl: 2, '2xl': 0 }}
+      mx={{ base: 2, md: 1, xl: 4, '2xl': 0 }}
+      my={2}
     >
       <SimpleGrid
         columns={{ base: 3, sm: 4, md: 6 }}
         justifyItems={'self-start'}
-        mb={4}
+        my={{ md: 10, lg: 8, xl: 4 }}
+        mx={{ lg: 4, xl: '6' }}
+        w={'fit-content'}
       >
         {cat[0] !== null && (
           <Button
@@ -37,6 +42,7 @@ function Category(info) {
             fontWeight={'semibold'}
             onClick={e => setFilter(products)}
             borderRadius='0'
+            w={'50%'}
             h={'20px'}
             _focus={{
               color: 'black',
@@ -53,6 +59,7 @@ function Category(info) {
             onClick={e => handleFilter(e)}
             key={p.id}
             borderRadius='0'
+            w={'50%'}
             h={'20px'}
             _focus={{
               color: 'black',
