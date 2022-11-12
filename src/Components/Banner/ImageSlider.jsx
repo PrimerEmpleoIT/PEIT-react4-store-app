@@ -1,6 +1,8 @@
-import { Box, Image } from '@chakra-ui/react'
-import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
+
+import { Box, Image } from '@chakra-ui/react'
+
+import { Carousel } from 'react-responsive-carousel'
 
 const ImageSlider = ({ slides }) => {
   return (
@@ -12,7 +14,7 @@ const ImageSlider = ({ slides }) => {
       dynamicHeight={true}
       showThumbs={false}
     >
-      {slides.map((slide) => {
+      {slides.map(slide => {
         const { id, image } = slide
 
         return (
