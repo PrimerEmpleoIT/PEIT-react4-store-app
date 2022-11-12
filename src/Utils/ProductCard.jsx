@@ -62,25 +62,7 @@ function ProductCard({
             </Heading>
           </Flex>
         )}
-        <Button
-          style={styles.button}
-          onClick={() =>
-            dispatch(
-              addToCart({
-                id,
-                stock,
-                img,
-                icon,
-                description,
-                oldPrice,
-                price,
-                quantity,
-              })
-            )
-          }
-        >
-          comprar
-        </Button>
+
         <Image src={img} alt='img-product' w={48} />
         <StarRating />
         <Text
@@ -97,6 +79,34 @@ function ProductCard({
           {' '}
           $ {price}
         </Heading>
+        <Flex justify='center'>
+          <Button
+            borderWidth={'2px'}
+            border={'solid'}
+            borderColor={'logo'}
+            color={'logo'}
+            fontSize={{ md: 'description', lg: 'general' }}
+            fontWeight={'semibold'}
+            w={{ md: '6rem', xl: '7.5rem' }}
+            borderRadius='66px'
+            onClick={() =>
+              dispatch(
+                addToCart({
+                  id,
+                  stock,
+                  img,
+                  icon,
+                  description,
+                  oldPrice,
+                  price,
+                  quantity,
+                })
+              )
+            }
+          >
+            add to cart
+          </Button>
+        </Flex>
       </Box>
     </Box>
   )
