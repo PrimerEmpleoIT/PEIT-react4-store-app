@@ -64,25 +64,7 @@ function ProductCard({
             </Heading>
           </Flex>
         )}
-        <Button
-          style={styles.button}
-          onClick={() =>
-            dispatch(
-              addToCart({
-                id,
-                stock,
-                img,
-                icon,
-                description,
-                oldPrice,
-                price,
-                quantity,
-              })
-            )
-          }
-        >
-          comprar
-        </Button>
+
         <Image
           src={img}
           alt='img-product'
