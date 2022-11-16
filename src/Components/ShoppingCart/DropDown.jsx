@@ -52,8 +52,10 @@ const Dropdown = () => {
             base: '68px',
             md: '75px',
             '2xl': '90px',
-            '3xl': '270px',
-            '4xl': '320px',
+            '3xl': '130px',
+            '4xl': '205px',
+            '5xl': '230px',
+            '6xl': '310px',
           }}
           top={{ base: '60px', md: '95px' }}
         >
