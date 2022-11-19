@@ -32,31 +32,9 @@ const cartSlice = createSlice({
         state.producto.map((p, index) => state.producto[index].quantity--)
         state.quantity--
       }
-      // let isDelete = false
-
-      // state.producto.map((p, index) => {
-      //   if (p.id === action.payload) {
-      //     console.log('hola')
-      //     state.producto[index].quantity--
-      //     isDelete = true
-      //   }
-      // })
-      // state.producto = !isDelete
-      //   ? state.producto.filter(p => p.id !== action.payload)
-      //   : [...state.producto]
-      // state.quantity--
     },
   },
 })
 export const { addToCart, deleteCart } = cartSlice.actions
 
 export default cartSlice.reducer
-
-// id,
-// stock,
-// img,
-// icon,
-// description,
-// oldPrice,
-// price,
-// quantity,
