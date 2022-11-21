@@ -41,10 +41,15 @@ function Category(info) {
             fontSize={{ base: 'description', sm: 'general', md: 'normal' }}
             fontWeight={'semibold'}
             onClick={e => setFilter(products)}
-            borderRadius='0'
             w={'50%'}
+            color={'category'}
+            borderRadius={0}
             h={'20px'}
             _focus={{
+              color: 'black',
+              borderBottom: '2px solid #0156FF',
+            }}
+            _active={{
               color: 'black',
               borderBottom: '2px solid #0156FF',
             }}
@@ -58,10 +63,15 @@ function Category(info) {
             fontWeight={'semibold'}
             onClick={e => handleFilter(e)}
             key={p.id}
-            borderRadius='0'
             w={'50%'}
             h={'20px'}
+            color={'category'}
+            borderRadius={0}
             _focus={{
+              color: 'black',
+              borderBottom: '2px solid #0156FF',
+            }}
+            _active={{
               color: 'black',
               borderBottom: '2px solid #0156FF',
             }}

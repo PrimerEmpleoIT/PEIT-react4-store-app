@@ -10,7 +10,7 @@ function Categories() {
   const { loading, data, error } = useSelector(state => state.productos)
   const dispatch = useDispatch()
 
-  const makeAPICall = async () => {
+  /* const makeAPICall = async () => {
     try {
       const response = await fetch(
         'http://tech-store-api.onrender.com/categories',
@@ -30,12 +30,12 @@ function Categories() {
 
   useEffect(() => {
     makeAPICall()
-  }, [])
+  }, []) */
 
   useEffect(() => {
     setTimeout(function () {
       dispatch(getProducts(storeProducts))
-    }, 3000)
+    }, 1000)
   }, [])
 
   return (
@@ -46,7 +46,7 @@ function Categories() {
         </Flex>
       ) : (
         data.map(info => (
-          <Stack my={4} key={info.id}>
+          <Stack my={6} key={info.id}>
             <Show below={'lg'}>
               <CategoryCarousel {...info} key={info.id} />
             </Show>

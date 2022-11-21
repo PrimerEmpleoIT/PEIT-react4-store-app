@@ -107,7 +107,6 @@ function CategoryCarousel(info) {
             color={'white'}
             fontWeight={'normal'}
             fontSize={{ base: 'review', md: 'description' }}
-            textDecorationLine='underline'
             textAlign='center'
           >
             See all products
@@ -119,15 +118,21 @@ function CategoryCarousel(info) {
           gap={{ base: 2, md: 2 }}
           mx={2}
           maxW={'fit-content'}
+          py={4}
         >
           {cat[0] !== null && (
             <Button
               fontSize={{ base: 'description', sm: 'general', md: 'normal' }}
               fontWeight={'semibold'}
-              onClick={e => setFilter(products)}
-              borderRadius='0'
+              onClick={() => setFilter(products)}
+              color={'category'}
+              borderRadius={0}
               h={'20px'}
               _focus={{
+                color: 'black',
+                borderBottom: '2px solid #0156FF',
+              }}
+              _active={{
                 color: 'black',
                 borderBottom: '2px solid #0156FF',
               }}
@@ -142,9 +147,14 @@ function CategoryCarousel(info) {
               fontWeight={'semibold'}
               onClick={e => handleFilter(e)}
               key={p.id}
-              borderRadius='0'
+              borderRadius={0}
+              color={'category'}
               h={'20px'}
               _focus={{
+                color: 'black',
+                borderBottom: '2px solid #0156FF',
+              }}
+              _active={{
                 color: 'black',
                 borderBottom: '2px solid #0156FF',
               }}
