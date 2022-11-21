@@ -1,4 +1,5 @@
 import { Flex, Hide, Icon, Menu, Show, Text } from '@chakra-ui/react'
+
 import { AiFillInstagram } from 'react-icons/ai'
 import { FaFacebookSquare } from 'react-icons/fa'
 import MenuDropDown from './MenuDropDown'
@@ -20,9 +21,7 @@ function Header() {
                 <Text color='headerFont'>
                   Visit our showroom in 1234 Street Adress City Adress,1234
                 </Text>
-                <Text color='white' textDecorationLine='underline'>
-                  Contact US
-                </Text>
+                <Text color='white'>Contact US</Text>
               </Show>
             </Flex>
           </Show>

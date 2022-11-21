@@ -1,28 +1,24 @@
 import {
+  Button,
+  Flex,
+  IconButton,
+  Image,
   Menu,
   MenuButton,
-  MenuList,
-  MenuItem,
-  Flex,
-  Button,
-  Text,
   MenuDivider,
-  Image,
-  IconButton,
-  Badge,
-  Box,
+  MenuItem,
+  MenuList,
+  Text,
 } from '@chakra-ui/react'
-import { TiDeleteOutline } from 'react-icons/ti'
-import { TbEditCircle } from 'react-icons/tb'
-import PayPal from '@/assets/Cart/Group 106.svg'
 import { useDispatch, useSelector } from 'react-redux'
-import { deleteCart } from '@/Store/features/Cart/index'
+
 import { GrCart } from 'react-icons/gr'
+import PayPal from '@/assets/Cart/Group 106.svg'
+import { TbEditCircle } from 'react-icons/tb'
+import { TiDeleteOutline } from 'react-icons/ti'
+import { deleteCart } from '@/Store/features/Cart/index'
 
 const Dropdown = () => {
-  let screen = window.innerWidth
-  console.log(screen)
-
   const onCart = useSelector(state => state.cart)
   const dispatch = useDispatch()
 

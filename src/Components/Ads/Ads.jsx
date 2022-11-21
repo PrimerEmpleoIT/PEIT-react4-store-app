@@ -1,4 +1,3 @@
-import ads from '@/assets/Ads/adsLogo.svg'
 import {
   Box,
   Container,
@@ -8,6 +7,8 @@ import {
   Highlight,
   Image,
 } from '@chakra-ui/react'
+
+import ads from '@/assets/Ads/adsLogo.svg'
 
 function Ads() {
   return (
@@ -42,9 +43,7 @@ function Ads() {
             own it now, up to 6 months interest free
           </Highlight>
         </GridItem>
-        <GridItem fontSize={'general'} textDecoration={'underline'}>
-          learn more
-        </GridItem>
+        <GridItem fontSize={'general'}>learn more</GridItem>
       </Flex>
     </Container>
   )

@@ -1,21 +1,9 @@
 import { Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/react'
 
+import { RiShoppingCartLine } from 'react-icons/ri'
 import { StarRating } from '.'
 import { addToCart } from '@/Store/features/Cart'
 import { useDispatch } from 'react-redux'
-
-const styles = {
-  button: {
-    fontFamily: 'Poppins',
-    backgroundColor: 'transparent',
-    border: 'solid 1px',
-    with: '20px',
-    height: '15px',
-    fontSize: '10px',
-    color: 'available',
-    margin: '9px',
-  },
-}
 
 function ProductCard({
   id,
@@ -40,7 +28,7 @@ function ProductCard({
         w={{ lg: '90%', xl: '100%' }}
       >
         {stock === 'check availability' ? (
-          <Flex gap={1} pb={2}>
+          <Flex gap={1} pt={4} pb={2}>
             <Image w={3} src={icon} alt='unavailable' />
             <Heading
               as={'h4'}
@@ -52,7 +40,7 @@ function ProductCard({
             </Heading>
           </Flex>
         ) : (
-          <Flex gap={1} pb={2}>
+          <Flex gap={1} pt={4} pb={2}>
             <Image w={3} h={3} src={icon} alt='available' />
             <Heading
               as={'h4'}
@@ -69,7 +57,7 @@ function ProductCard({
           src={img}
           alt='img-product'
           w={{ base: '100%', xs: 48 }}
-          h={48}
+          h={{ base: 40, xl: 48 }}
         />
         <StarRating />
         <Text
@@ -88,14 +76,18 @@ function ProductCard({
         </Heading>
         <Flex justify='center'>
           <Button
-            borderWidth={'2px'}
+            display={'flex'}
+            justifyContent={'center'}
+            alignItems={'center'}
+            gap={2}
+            borderWidth={'1px'}
             border={'solid'}
             borderColor={'logo'}
             color={'logo'}
-            fontSize={{ md: 'description', lg: 'general' }}
+            fontSize={{ base: 'small', sm: 'review', md: 'description' }}
             fontWeight={'semibold'}
-            w={{ md: '6rem', xl: '7.5rem' }}
             borderRadius='66px'
+            mt={4}
             onClick={() =>
               dispatch(
                 addToCart({
@@ -111,7 +103,11 @@ function ProductCard({
               )
             }
           >
-            add to cart
+            <RiShoppingCartLine
+              fontSize={'1rem'}
+              color={'rgba(1, 86, 255, 1)'}
+            />
+            Add to cart
           </Button>
         </Flex>
       </Box>
