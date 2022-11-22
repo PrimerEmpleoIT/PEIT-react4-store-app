@@ -1,1 +1,9 @@
-export * from "./products"
+export * from './Benefits'
+export { default as followUs } from './followUs'
+export * from './footerList'
+export * from './navBarLinks'
+export * from './NewData'
+export { default as pagesRoutes } from './pagesRoutes'
+export * from './SlideData'
+export * from './storeProducts'
+export * from './testimonials'
